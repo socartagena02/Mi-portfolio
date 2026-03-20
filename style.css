@@ -1,0 +1,352 @@
+:root{
+    --bg-color: #1c122c;
+    --card-bg: #592b6c67;     
+    --text-primary: #f5f5f5;
+    --accent-color: #ff80ab;   
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --nav-bg: rgba(61, 43, 69, 0.9);
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+.button-group a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-group a:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+nav {
+    background-color: rgba(182, 100, 214, 0.408); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease; 
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-hidden {
+    top: -80px; 
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 25px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--text-primary);
+}
+
+nav a:hover{ 
+    background-color: #311c3a;
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+[data-tema = "light"]{
+    --bg-color: #fce4ec;      
+    --card-bg: #ffffff;       
+    --text-primary: #2d3436;   
+    --accent-color: #ff4081;   
+    --nav-bg: rgba(255, 255, 255, 0.8);
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 28px;
+    position: relative;
+    width: 54px;
+}
+
+.slider {
+    background-color: #3d2b45; 
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 3px;
+    content: "";
+    height: 22px;
+    left: 3px;
+    position: absolute;
+    transition: .4s;
+    width: 22px;
+    border-radius: 50%;
+    z-index: 2; 
+}
+
+input:checked + .slider {
+    background-color: #4d276e; 
+}
+
+.theme-switch input{
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#slider-icon-sun, #slider-icon-moon {
+    font-size: 14px;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+#slider-icon-sun {
+    color: #f1c40f;
+}
+
+#slider-icon-moon {
+    color: #fff;
+}
+
+input:checked + .slider #slider-icon-sun {
+    opacity: 1;
+}
+
+input:not(:checked) + .slider #slider-icon-moon {
+    opacity: 1;
+}
+
+#hero {
+    background-color: var(--card-bg);
+    margin-top: 120px;
+    background-image: url();
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+.proyectos-container{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    padding: 40px 20px;
+}
+
+.proyectos-container h2{
+    flex-basis: 100%;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.proyecto-card {
+    background-color: var(--card-bg);
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    font-family: sans-serif;
+    transition: 0.3s;
+}
+
+.proyecto-card:hover{
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    transform: translateY(-5px); 
+}
+
+.proyecto-card button{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #421669;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.proyecto-card button:hover{
+    filter: brightness(1.5);
+}
+
+.card-img{
+    width: 100%;
+    height: auto;
+}
+
+.card-content{
+    padding: 15px;
+}
+
+.card-img:hover{
+    filter: blur(10px);
+}
+
+.figma-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.56);
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+.img-container:hover .card-img {
+    filter: blur(8px) brightness(0.7);
+    transform: scale(1.05); 
+}
+
+.figma-link {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+}
+
+
+.img-container:hover .card-img {
+    filter: blur(8px) brightness(0.7);
+    transform: scale(1.05); 
+}
+
+.img-container:hover .figma-link {
+    opacity: 1;
+}
+
+.btn-download {
+    margin-top: 10px;
+    background-color: white;
+    color: #461B09;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-download:hover{
+    transform: translateY(-5px); 
+    box-shadow: 0 0 15px rgba(98, 28, 130, 0.919);
+}
+
+.tag-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.tag {
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.tag-angular {
+    background: linear-gradient(90deg, #F80643, #AB25F7) !important;
+}
+
+.tag-typescript {
+    background-color:#3178C6 !important;
+}
+
+.tag-python { 
+    background: linear-gradient(90deg, #3775A8, #366D9A) !important; 
+}
+
+.tag-javascript {
+    background-color:  #F7DF1E !important;
+    color: #000000;
+}
+
+.tag-django { 
+    background-color: #003E2B !important; 
+}
+
+.tag:hover {
+    transform: translateY(-5px); 
+}
+
+.tag-angular:hover {
+    box-shadow: 0 0 15px rgba(248, 6, 67, 0.5);
+}
+
+.tag-typescript:hover {
+    box-shadow: 0 0 15px rgba(95, 108, 255, 0.5);
+}
+
+.tag-python:hover { 
+    box-shadow: 0 0 15px rgba(55, 118, 171, 0.5);
+}
+
+.tag-javascript:hover {
+    box-shadow: 0 0 15px rgba(255, 253, 114, 0.774);
+} 
+
+.tag-django:hover { 
+    box-shadow: 0 0 15px #0c6d4d;
+}
+
+.button-group{
+    margin-top: auto; 
+    padding-top: 5px; 
+    display: flex;
+    gap: 30px;
+
+}
