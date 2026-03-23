@@ -11,29 +11,23 @@ window.addEventListener("scroll", function(){
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
 
-const btnTheme = document.querySelector("#themes");
 
-btnTheme.addEventListener("click", () => {
-    const body = document.body;
-    
-    if (body.getAttribute("data-tema") === "light") {
-        body.removeAttribute("data-tema");
-    } else {
-        body.setAttribute("data-tema", "light");
-    }
+const btnVerMas = document.getElementById('btnverMas');
+const carpeta = document.getElementById('proyectos2');
+const overlay = document.getElementById('dolphinOverlay');
+
+btnVerMas.addEventListener('click', (e) => {
+    e.preventDefault();
+    carpeta.classList.toggle('mostrar');
+    overlay.classList.toggle('mostrar');
 });
 
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme === "dark") {
-    document.body.setAttribute("data-tema", "dark");
-}
+overlay.addEventListener('click', () => {
+    carpeta.classList.remove('mostrar');
+    overlay.classList.remove('mostrar');
+});
 
-btnTheme.addEventListener("click", () => {
-    const body = document.body;
-    
-    if (body.getAttribute("data-tema") !== "light") {
-        body.setAttribute("data-tema", "light");
-    } else {
-        body.removeAttribute("data-tema");
-    }
+document.querySelector('.btn-close').addEventListener('click', () => {
+    carpeta.classList.remove('mostrar');
+    overlay.classList.remove('mostrar');
 });

@@ -9,24 +9,15 @@
 </head>
 <body>
     <header>
-       <nav>
-        <ul>
-           <li>Sofía Cartagena</li>
-            <li><a href="#sobremi">Sobre mí</a></li>
-            <li><a href="#tecnologias">Tecnologías</a></li>
-            <li><a href="#proyectos">Mis proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round">
-                    <i class="bi bi-sun-fill" id="slider-icon-sun"></i>
-                    <i class="bi bi-moon-stars-fill" id="slider-icon-moon"></i>
-                </div>
-            </label>
-        </li>
-    </ul>
-</nav>
+        <nav>
+            <ul>
+                <li>Sofía Cartagena</li>
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#proyectos">Mis proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>   
+            </ul>
+        </nav>
     </header>
     <main>
         <section id="hero">
@@ -34,27 +25,78 @@
                 <p>Ingeniera en informática, especializada en QA</p>
             </h2>
             <button class="btn-download"> Descargar CV <i class="bi bi-download"></i></button>
+            <div class="social-links">
+                <a href="https://github.com/socartagena02" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/sofía-cartagena-ti/" target="_blank"><i class="bi bi-linkedin"></i></a>
+            </div>
         </section>
+
         <section id="sobremi">
             <h2>Sobre mí</h2>
         </section>
+
         <section id="tecnologias">
             <h2>Tecnologías</h2>
         </section>
+
         <section id="proyectos" class="proyectos-container">
             <h2>Mis proyectos</h2>
-            <div class="proyecto-card">
-                    <div class="img-container">
-                        <img src="images/Starsverse.png" alt="Starverse" class="card-img">
-                        <a href="https://www.figma.com/design/hY4sZBYpyMx0Vtl3FuN8WJ/Starsverse--project?node-id=0-1&t=TEX0wJuZk0H5y6T2-1" 
-                            target="_blank" class="figma-link">
-                            <i class="bi bi-figma"></i> Ver en Figma
-                        </a>
-                    </div> 
-                    <div class="card-content">
-                        <h3>Starsverse <span>-</span> E-commerce</h3>
-                        <p>Una plataforma de compras online.</p>
 
+            <div class="proyecto-card">
+                <div class="img-container">
+                    <img src="images/zstars-ai.png" alt="Z-STARS-AI" class="card-img">
+                    <a href="https://www.figma.com/proto/toq6iZzf5nAo4pHuaAxr9K/Z-STARS-AI---project?node-id=3-58&p=f&t=h8OyWSaR710Io6iW-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A58&show-proto-sidebar=1" 
+                        target="_blank" class="figma-link">
+                        <i class="bi bi-figma"></i> Ver en Figma
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3>Z-STARS AI <span>-</span> Sitio web</h3>
+                    <p>Herramienta de estimulación cognitiva para pacientes de terapia.</p>
+                    <div class="tag-container">
+                        <span class="tag tag-django">Django</span>
+                        <span class="tag tag-javascript">Javascript</span>
+                        <span class="tag tag-python">Python</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/Z-STARS-AI.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
+                        <button class="demo"><i class="bi bi-link-45deg"><a href="https://drive.google.com/drive/folders/1r7_kpYfnWr6WJkrn15d8FZO7U8belXGD?usp=sharing" target="_blank" rel="noopener noreferrer">Ver demo</a></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card">
+                <div class="img-container">
+                    <img src="images/reconocimientoFacial.jpg" alt="MemoryFlow" class="card-img">
+                    <a href="https://www.notion.so/Reconocimiento-facial-x-IA-1e28b5a8edab8017bab3f256d425cc2d?source=copy_link" 
+                        target="_blank" class="figma-link">
+                        <i class="bi bi-figma"></i> Ver notion
+                    </a>
+                </div>
+                <div class="card-content">
+                    <h3>Sistema de reconocimiento facial <span>-</span> Reconocimiento IA</h3>
+                    <p>Herramienta para detectar caras en asistencia.</p>
+                    <div class="tag-container">
+                        <span class="tag tag-python">Python</span>
+                        <span class="tag tag-YOLOv8">YOLOv8</span>
+                    </div>
+                    <div class="button-group">
+                        <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card">
+                <div class="img-container">
+                    <img src="images/Starsverse.png" alt="Starverse" class="card-img">
+                    <a href="https://www.figma.com/design/hY4sZBYpyMx0Vtl3FuN8WJ/Starsverse--project?node-id=0-1&t=TEX0wJuZk0H5y6T2-1" 
+                        target="_blank" class="figma-link">
+                        <i class="bi bi-figma"></i> Ver en Figma
+                    </a>
+                </div> 
+                <div class="card-content">
+                    <h3>Starsverse <span>-</span> E-commerce</h3>
+                    <p>Una plataforma de compras online para fanaticos del anime.</p>
                     <div class="tag-container">
                         <span class="tag tag-angular">Angular</span>
                         <span class="tag tag-typescript">Typescript</span>
@@ -62,67 +104,104 @@
                     <div class="button-group">
                         <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/Starsverse.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
                     </div>
-                 </div>
-            </div>
-           <div class="proyecto-card">
-                    <div class="img-container">
-                        <img src="images/MemoryFlow.png" alt="MemoryFlow" class="card-img">
-                        <a href="https://www.figma.com/proto/toq6iZzf5nAo4pHuaAxr9K/MemoryFlow---project?node-id=0-1&t=IRDaqgImEHMa3P6r-1" 
-                            target="_blank" class="figma-link">
-                            <i class="bi bi-figma"></i> Ver en Figma
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <h3>MemoryFlow <span>-</span> Sitio web</h3>
-                        <p>Herramienta de estimulación cognitiva para pacientes de terapia.</p>
-                        
-                    <div class="tag-container">
-                        <span class="tag tag-django">Django</span>
-                        <span class="tag tag-javascript">Javascript</span>
-                        <span class="tag tag-python">Python</span>
-                    </div>
-                    <div class="button-group">
-                        <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/MemoryFlow.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
-                        <button class="demo"><i class="bi bi-link-45deg"><a href="https://drive.google.com/drive/folders/1r7_kpYfnWr6WJkrn15d8FZO7U8belXGD?usp=sharing" target="_blank" rel="noopener noreferrer">Ver demo</a></i></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="proyecto-card">
-                    <div class="img-container">
-                        <img src="images/reconocimientoFacial.jpg" alt="MemoryFlow" class="card-img">
-                        <a href="https://www.notion.so/Reconocimiento-facial-x-IA-1e28b5a8edab8017bab3f256d425cc2d?source=copy_link" 
-                            target="_blank" class="figma-link">
-                            <i class="bi bi-figma"></i> Ver notion
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <h3>Sistema de reconocimiento facial <span>-</span> Reconocimiento IA</h3>
-                        <p>Herramienta para detectar caras en asistencia.</p>
-                    <div class="tag-container">
-                        <span class="tag tag-python">Python</span>
-                    </div>
-                    <div class="button-group">
-                        <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
-                    </div>
-                 </div>
-            </div>
-            <div class="otros-proyectos">
-                <div class="ver-mas">
-                    <p></p>
                 </div>
             </div>
-
         </section>
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <div class="social-links">
-                <a href="https://github.com/socartagena02" target="_blank"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/sofía-cartagena-ti/" target="_blank"><i class="bi bi-linkedin"></i></a>
+
+        <section>
+            <div class="otros-proyectos">
+                <div class="ver-mas">
+                    <a href="#proyectos2" id="btnverMas" style="text-decoration: none; color: inherit;"><p>Ver más proyectos</p></a>
+                </div>
             </div>
+        </section>
+        <div class="dolphin-overlay" id="dolphinOverlay"></div>
+        <section id="proyectos2" class="KDE-plasmafolder">
+            <div class="dolphin-header">
+                <div class="dolphin-left">
+                    <i class="bi bi-folder"></i>
+                    <span> Otros proyectos - Dolphin</span>
+                </div>
+                <div class="dolphin-controls">
+                    <span id="btn-min" class="dot btn-min"></span>
+                    <span id="btn-max" class="dot btn-max"></span>
+                    <span id="btn-close" class="dot btn-close"></span>
+                </div>
+            </div>
+            <div class="glass-pannel">
+
+                <div class="proyecto-card">
+                    <div class="img-container">
+                        <img src="images/AgeUp_Games.png" alt="AgeUp_Games" class="card-img">
+                        <a href="https://www.canva.com/design/DAG0Tdt38CQ/BXnRTRTODwvallf9Sl7uAw/edit?utm_content=DAG0Tdt38CQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                            target="_blank" class="figma-link notion-fix">
+                            <i class="bi bi-figma"></i> Ver MockUp
+                        </a>
+                    </div> 
+                    <div class="card-content">
+                        <h3>AgeUp_Games <span>-</span> Proyecto de titulo</h3>
+                        <p>AgeUp_games es un sistema web de minijuegos cognitivos para el adulto mayor.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-django">Django</span>
+                            <span class="tag tag-javascript">Javascript</span>
+                            <span class="tag tag-python">Python</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/AgeUp_Game.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="img-container">
+                        <img src="images/THE-PARADISE-OF-THE-WHEEL.png" alt="The Paradise of the Wheel" class="card-img">
+                        <a href="https://www.canva.com/design/DAFt0CZXb-k/R-w02qgle--VYrR8A92N_Q/edit?utm_content=DAFt0CZXb-k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+                            target="_blank" class="figma-link notion-fix">
+                            <i class="bi bi-figma"></i> Ver MockUp
+                        </a>
+                    </div> 
+                    <div class="card-content">
+                        <h3>THE PARADISE OF THE WHEEL <span>APP</span></h3>
+                        <p>The paradise of the wheel es una aplicación movil de viajes para alumnos de la institución.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-ionic">Ionic</span>
+                            <span class="tag tag-scss">scss</span>
+                            <span class="tag tag-typescript">Typescript</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="code"><i class="bi bi-link-45deg"><a href="https://github.com/socartagena02/Proyecto_movil.git" target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="img-container">
+                        <img src="images/infinityMusic-bot.jpg" alt="Infinity-music" class="card-img">
+                        <a href="#" target="_blank" class="figma-link notion-fix">
+                            <i class="bi bi-figma"></i> Visitar página
+                        </a>
+                    </div> 
+                    <div class="card-content">
+                        <h3>Infinity music <span>-</span> bot de discord</h3>
+                        <p>Un bot de discord para escuchar música en tu servidor.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-discord">Discord.py</span>
+                            <span class="tag tag-railway">railway</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contacto">
+            <h2>Contacto</h2>
         </section>
     </main>
     <footer>
-        <p>&copy; 2026  Sofía Cartagena</p>
+        <p>&copy; 2026 Sofía Cartagena</p>
     </footer>
+<script src="main.js"></script>
 </body>
 </html>

@@ -1,352 +1,521 @@
-:root{
-    --bg-color: #1c122c;
-    --card-bg: #592b6c67;     
-    --text-primary: #f5f5f5;
-    --accent-color: #ff80ab;   
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --nav-bg: rgba(61, 43, 69, 0.9);
-    --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-}
+    :root{
+        --bg-color: #1E0F33;
+        --card-bg: #73375F;     
+        --text-primary: #f5f5f5;
+        --accent-color: #ff80ab;   
+        --nav-bg: rgba(255, 255, 255, 0.8);
+        --nav-bg: rgba(61, 43, 69, 0.9);
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
 
-* { 
-    margin: 0;
-    padding: 0;
-}
+    * { 
+        margin: 0;
+        padding: 0;
+    }
 
-.button-group a {
-    text-decoration: none;
-    color: white;
-}
+    .button-group a {
+        text-decoration: none;
+        color: white;
+    }
 
-.button-group a:hover{
-    opacity: 0.8;
-    text-decoration: underline;
-}
+    .button-group a:hover{
+        opacity: 0.8;
+        text-decoration: underline;
+    }
 
-nav {
-    background-color: rgba(182, 100, 214, 0.408); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    transition: top 0.3s ease; 
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    nav {
+        backdrop-filter: blur(10px); 
+        -webkit-backdrop-filter: blur(10px);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: top 0.3s ease; 
+        z-index: 1000;
+    }
 
-.nav-hidden {
-    top: -80px; 
-}
+    .nav-hidden {
+        top: -80px; 
+    }
 
-nav ul{
-    width: 100%;
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
+    nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 
-nav li{
-    height: 50px;
-}
+    nav li{
+        height: 50px;
+    }
 
-nav a{
-    height: 100%;
-    padding: 0 25px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    color: var(--text-primary);
-}
+    nav a{
+        height: 100%;
+        padding: 0 25px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: var(--text-primary);
+    }
 
-nav a:hover{ 
-    background-color: #311c3a;
-}
+    nav a:hover{ 
+        background-color: #311c3a;
+    }
 
-nav li:first-child{
-    margin-right: auto;
-}
+    nav li:first-child{
+        margin-right: auto;
+    }
 
-[data-tema = "light"]{
-    --bg-color: #fce4ec;      
-    --card-bg: #ffffff;       
-    --text-primary: #2d3436;   
-    --accent-color: #ff4081;   
-    --nav-bg: rgba(255, 255, 255, 0.8);
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-body{
-    background-color: var(--bg-color);
-    color: var(--text-primary);
-    transition: background-color 0.3s, color 0.3s;
-    font-family: 'Segoe UI', sans-serif;
-}
+    body{
+        background: var(--bg-color);
+        color: var(--text-primary);
+        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Segoe UI', sans-serif;
+    }
 
-.theme-switch {
-    display: inline-block;
-    height: 28px;
-    position: relative;
-    width: 54px;
-}
+    #hero {
+        background-color: var(--card-bg);
+        margin-top: 120px;
+        background-image: url();
+        border-radius: 15px;
+        padding: 40px;
+        box-shadow: var(--shadow);
+        margin-bottom: 20px;
+    }
 
-.slider {
-    background-color: #3d2b45; 
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transition: .4s;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6px;
-    border-radius: 34px;
-}
+    .proyectos-container{
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        gap: 15px; 
+        padding: 20px 5px;
+        background-color: #282148;
+        border-radius: 5px;
+    }
 
-.slider:before {
-    background-color: #fff;
-    bottom: 3px;
-    content: "";
-    height: 22px;
-    left: 3px;
-    position: absolute;
-    transition: .4s;
-    width: 22px;
-    border-radius: 50%;
-    z-index: 2; 
-}
+    .proyectos-container h2{
+        flex-basis: 100%;
+        text-align: center;
+        color: white;
+        margin-bottom: 30px;
+    }
 
-input:checked + .slider {
-    background-color: #4d276e; 
-}
+    .proyecto-card {
+        background-color: var(--card-bg);
+        width: 300px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        overflow: hidden;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        transition: 0.3s;
+    }
 
-.theme-switch input{
-    opacity: 0;
-    position: absolute;
-    width: 0;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-}
+    .proyecto-card:hover{
+        box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+        transform: translateY(-5px); 
+    }
 
-input:checked + .slider:before {
-    transform: translateX(26px);
-}
+    .proyecto-card button{
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #421669;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+    }
 
-#slider-icon-sun, #slider-icon-moon {
-    font-size: 14px;
-    z-index: 1;
-    transition: 0.3s;
-}
+    .proyecto-card h3{
+        text-align: center;
+        font-size: 20px;
+    }
 
-#slider-icon-sun {
-    color: #f1c40f;
-}
+    .proyecto-card p{
+        text-align: left;
+        font-size: 20px;
+        color: #9999bb;
+    }
 
-#slider-icon-moon {
-    color: #fff;
-}
+    .proyecto-card button:hover{
+        border-color: #6520a1;
+        filter: none;
+        transform: translateY(-5px);
+    }
 
-input:checked + .slider #slider-icon-sun {
-    opacity: 1;
-}
+    .card-img{
+        width: 100%;
+        height: auto;
+    }
 
-input:not(:checked) + .slider #slider-icon-moon {
-    opacity: 1;
-}
+    .card-content{
+        padding: 15px;
+    }
 
-#hero {
-    background-color: var(--card-bg);
-    margin-top: 120px;
-    background-image: url();
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: var(--shadow);
-    margin-bottom: 20px;
-}
+    .img-container a{
+        color: rgba(255, 255, 255, 0.479);
+        text-decoration: none;
+    }
 
-.proyectos-container{
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 20px; 
-    padding: 40px 20px;
-}
+    .card-img:hover{
+        filter: blur(10px);
+    }
 
-.proyectos-container h2{
-    flex-basis: 100%;
-    text-align: center;
-    color: white;
-    margin-bottom: 30px;
-}
+    .figma-link {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        backdrop-filter: blur(5px);
+    }
 
-.proyecto-card {
-    background-color: var(--card-bg);
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    overflow: hidden;
-    font-family: sans-serif;
-    transition: 0.3s;
-}
+    .img-container:hover .card-img {
+        filter: blur(8px) brightness(0.7);
+        transform: scale(1.05); 
+    }
 
-.proyecto-card:hover{
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
-    transform: translateY(-5px); 
-}
+    .img-container:hover .figma-link {
+        opacity:10;
+    }
 
-.proyecto-card button{
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #421669;
-    color: white;
-    text-decoration: none;
-    border-radius: 20px;
-}
+    .btn-download {
+        margin-top: 10px;
+        background-color: white;
+        color: #461B09;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        cursor: pointer;
+    }
 
-.proyecto-card button:hover{
-    filter: brightness(1.5);
-}
+    .btn-download:hover{
+        transform: translateY(-5px); 
+        box-shadow: 0 0 15px rgba(98, 28, 130, 0.919);
+    }
 
-.card-img{
-    width: 100%;
-    height: auto;
-}
+    .tag-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 15px 0;
+    }
 
-.card-content{
-    padding: 15px;
-}
+    .tag {
+        padding: 4px 12px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        color: white;
+    }
 
-.card-img:hover{
-    filter: blur(10px);
-}
+    .tag-angular {
+        background: linear-gradient(90deg, #F80643, #AB25F7) !important;
+    }
 
-.figma-link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.56);
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-    backdrop-filter: blur(5px);
-}
+    .tag-typescript {
+        background-color:#3178C6 !important;
+    }
 
-.img-container:hover .card-img {
-    filter: blur(8px) brightness(0.7);
-    transform: scale(1.05); 
-}
+    .tag-python { 
+        background: linear-gradient(90deg, #3775A8, #366D9A) !important; 
+    }
 
-.figma-link {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    .tag-javascript {
+        background-color: #F7DF1E !important;
+        color: #000000;
+    }
 
-    font-weight: bold;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 2;
-    backdrop-filter: blur(5px);
-}
+    .tag-django { 
+        background-color: #003E2B !important; 
+    }
 
+    .tag:hover {
+        transform: translateY(-5px); 
+    }
 
-.img-container:hover .card-img {
-    filter: blur(8px) brightness(0.7);
-    transform: scale(1.05); 
-}
+    .tag-angular:hover {
+        box-shadow: 0 0 15px rgba(248, 6, 67, 0.5);
+    }
 
-.img-container:hover .figma-link {
-    opacity: 1;
-}
+    .tag-typescript:hover {
+        box-shadow: 0 0 15px rgba(95, 108, 255, 0.5);
+    }
 
-.btn-download {
-    margin-top: 10px;
-    background-color: white;
-    color: #461B09;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-}
+    .tag-python:hover { 
+        box-shadow: 0 0 15px #FFD647;
+    }
 
-.btn-download:hover{
-    transform: translateY(-5px); 
-    box-shadow: 0 0 15px rgba(98, 28, 130, 0.919);
-}
+    .tag-javascript:hover {
+        box-shadow: 0 0 15px rgba(255, 253, 114, 0.774);
+    } 
 
-.tag-container{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 15px 0;
-}
+    .tag-django:hover { 
+        box-shadow: 0 0 15px #0c6d4d;
+    }
 
-.tag {
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: white;
-}
+    .button-group{
+        margin-top: auto; 
+        padding-top: 5px; 
+        display: flex;
+        gap: 30px;
+    }
 
-.tag-angular {
-    background: linear-gradient(90deg, #F80643, #AB25F7) !important;
-}
+    .tag-YOLOv8{
+        background: linear-gradient(90deg, #09C4E7, #0B23A9) !important; 
+        color: #0B23A9;
+    }
+    .tag-YOLOv8:hover{
+        box-shadow: 0 0 15px #101514;
+    }
 
-.tag-typescript {
-    background-color:#3178C6 !important;
-}
+    .tag-discord{
+        background-color: #5865F2;
+    }
 
-.tag-python { 
-    background: linear-gradient(90deg, #3775A8, #366D9A) !important; 
-}
+    .tag-discord:hover{
+        transform: translateY(-5px); 
+    }
 
-.tag-javascript {
-    background-color:  #F7DF1E !important;
-    color: #000000;
-}
+    .tag-railway{
+        background-color: #000000;
+    }
 
-.tag-django { 
-    background-color: #003E2B !important; 
-}
+    .tag-railway:hover{
+        transform: translateY(-5px); 
+    }
 
-.tag:hover {
-    transform: translateY(-5px); 
-}
+    .tag-ionic{
+        background-color: #4A8BFF;
+    }
 
-.tag-angular:hover {
-    box-shadow: 0 0 15px rgba(248, 6, 67, 0.5);
-}
+    .tag-scss{
+        background-color: #CF649B;
+    }
 
-.tag-typescript:hover {
-    box-shadow: 0 0 15px rgba(95, 108, 255, 0.5);
-}
+    .otros-proyectos {
+        text-align: center;
+        margin: 15px;
+        font-size: 25px;
+        color: #A60045;
+        position: relative; 
+        display: inline-block; 
+        left: 50%; 
+        transform: translateX(-50%); 
+        cursor: pointer; 
+    }
 
-.tag-python:hover { 
-    box-shadow: 0 0 15px rgba(55, 118, 171, 0.5);
-}
+    .otros-proyectos p::after {
+        content: ""; 
+        position: absolute; 
+        bottom: -5px; 
+        left: 50%;   
+        width: 0%;
+        height: 3px; 
+        background-color: #A60045; 
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out; 
+    }
 
-.tag-javascript:hover {
-    box-shadow: 0 0 15px rgba(255, 253, 114, 0.774);
-} 
+    .otros-proyectos p:hover::after {
+        width: 100%;
+        left: 0;
+    }
 
-.tag-django:hover { 
-    box-shadow: 0 0 15px #0c6d4d;
-}
+    .KDE-plasmafolder{
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto; 
+        background: #2a2a3e;
+        border-radius: 12px;
+        border: 1px solid rgba(255,255,255,0.1);
+        box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05) inset;
+        overflow: hidden;
+    }
 
-.button-group{
-    margin-top: auto; 
-    padding-top: 5px; 
-    display: flex;
-    gap: 30px;
+    .dolphin-header{
+        background: #1e1e30;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        gap: 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        position: relative;
+    }
 
-}
+    .dolphin-left {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #e8e8f0;
+        font-size: 13px;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        white-space: nowrap;
+    }
+
+    .dolphin-controls {
+        margin-left: auto;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: opacity 0.15s;
+    }
+    .dot:hover { 
+        opacity: 0.75; 
+    }
+
+    .btn-close { 
+        background: #53525E; 
+    }
+
+    .btn-min   { 
+        background: #53525E; 
+    }
+
+    .btn-max   { 
+        background: #53525E; 
+    }
+
+    .glass-pannel {
+        padding: 60px;
+        background: linear-gradient(180deg, #23233a 0%, #1e1e30 100%);
+        display: flex;       
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;  
+        padding: 40px;
+        background: linear-gradient(180deg, #23233a 0%, #1e1e30 100%);
+    }
+
+    .KDE-plasmafolder .proyecto-card {
+        background: var(--card-bg);
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: none;
+        transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+        width: 250px;
+        flex-shrink: 0;
+    }
+
+    .KDE-plasmafolder .proyecto-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(61, 174, 233, 0.35);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .KDE-plasmafolder .img-container {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+    }
+
+    .KDE-plasmafolder .card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .KDE-plasmafolder .card-content {
+        padding: 15px;
+    }
+
+    .KDE-plasmafolder .card-content h3 {
+        font-size: 20px;
+        color: #e8e8f0;
+        margin-bottom: 4px;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .KDE-plasmafolder .card-content p {
+        font-size: 14px; 
+        line-height: 1.4;
+        color: #b0b0d1;
+        margin-bottom: 6px;
+    }
+
+    .KDE-plasmafolder .tag-container {
+        margin: 6px 0;
+        gap: 4px;
+    }
+
+    .KDE-plasmafolder .tag {
+        font-size: 13px;
+        padding: 2px 8px;
+    }
+
+    .KDE-plasmafolder .button-group {
+        margin-top: 6px;
+        gap: 0;
+        padding-top: 0;
+    }
+
+    .KDE-plasmafolder .proyecto-card button {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #421669;
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+    }
+
+    .KDE-plasmafolder .proyecto-card button:hover {
+        border-color: #6520a1;
+        filter: none;
+    }
+
+    .KDE-plasmafolder .proyecto-card button a {
+        text-decoration: none;
+    }
+
+    .notion-fix{
+        top: 50%
+    }
+
+    #proyectos2.KDE-plasmafolder {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.3);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 999;
+        width: 90%;
+        max-width: 900px;
+        transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease;
+    }
+
+    #proyectos2.KDE-plasmafolder.mostrar {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .dolphin-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s ease;
+        backdrop-filter: blur(3px);
+    }
+
+    .dolphin-overlay.mostrar {
+        opacity: 1;
+        pointer-events: all;
+    }
