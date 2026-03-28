@@ -1,3 +1,37 @@
+async function loadParticles() {
+  await tsParticles.load("tsparticles", {
+    fullScreen: { enable: true, zIndex: -1 },
+    particles: {
+      number: { value: 80 },
+      color: { value: "#ffffff" },
+      links: {
+        enable: true,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: {
+        enable: true,
+        speed: 2,
+        direction: "none",
+        outModes: "out"
+      }
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "grab" },
+        onClick: { enable: true, mode: "push" }
+      }
+    },
+    background: {
+      color: "#1a0b2e" 
+    }
+  });
+}
+
+loadParticles();
+
 let lastScrollTop = 0;
 const navbar= document.querySelector("nav")
 
