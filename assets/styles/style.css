@@ -6,7 +6,7 @@
     --nav-bg: rgba(255, 255, 255, 0.8);
     --nav-bg: rgba(61, 43, 69, 0.9);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    --cards: #430b4ed0;
+    --cards: #430b4e92;
     --cards-tech: #8c19a255 ;
 }
 
@@ -33,10 +33,6 @@ nav {
     width: 100%;
     transition: top 0.3s ease;
     z-index: 1000;
-}
-
-.nav-hidden {
-    top: -80px;
 }
 
 nav ul {
@@ -68,6 +64,13 @@ nav li:first-child {
     margin-right: auto;
 }
 
+.izumi-gif{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 #tsparticles {
   position: fixed;
   width: 100%;
@@ -86,11 +89,16 @@ body {
 }
 
 #hero {
+    scroll-margin-top: 80px;
     background-color: var(--card-bg);
-    margin-top: 230px;
+    margin-top: 295px;
     border-radius: 15px;
-    padding: 40px;
+    padding: 100px;
     box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    backdrop-filter: blur(3px);
 }
 
 #hero h2{
@@ -102,13 +110,33 @@ body {
     font-size: 25px;
 }
 
+.hero-container {
+    position: relative;
+}
 
+.avatar {
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);  
+  bottom: auto;
+}
+
+.image-avatar {
+  width: auto;
+  height: 330px;  
+  object-fit: contain;
+  display: block;
+  right: 2rem
+}
 #sobremi {
+    scroll-margin-top: 80px;
     padding: 2%;
     background-color: var(--card-bg);
     border-radius: 15px;
-    margin-top: 200px;
+    margin-top: 320px;
     box-shadow: var(--shadow);
+    backdrop-filter: blur(3px);
 }
 
 #sobremi h2{
@@ -118,9 +146,13 @@ body {
 #sobremi p{
     text-align: left;
     font-size: 20px;
+    max-width:1180px;
+    margin: auto;
 }
 #sobremi li{
     font-size: 20px;
+    max-width:1180px;
+    margin: auto;
 }
 
 #sobremi span{
@@ -137,6 +169,7 @@ body {
     justify-content: center;
     overflow: hidden;
     margin-top: 60px;
+    backdrop-filter: blur(3px);
 }
 
 .exp1 {
@@ -195,6 +228,7 @@ body {
     justify-content: center;
     overflow: hidden;
     margin-top: 80px;
+    backdrop-filter: blur(3px);
 }
 
 .duocUC {
@@ -252,6 +286,7 @@ body {
     border-radius: 15px;
     box-shadow: var(--shadow);
     margin-top: 100px;
+    backdrop-filter: blur(3px);
 }
 
 .proyectos-container h2 {
@@ -676,12 +711,77 @@ body {
     pointer-events: all;
 }
 
+#tecnologias{
+    display: flex;
+    flex-direction: column;     
+    justify-content: center; 
+    align-items: center;      
+    gap: 10px;                
+    width: 100%;
+    padding: 0; 
+    margin-top: 60px;
+    background: transparent; 
+}  
+.contenedor-flex {
+    display: flex;         
+    flex-direction: row;    
+    justify-content: center; 
+    align-items: stretch;
+    gap: 40px;              
+    width: 100%;            
+    flex-wrap: wrap; 
+}      
+
+#tecnologias h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.frontend-dev, .backend-dev, .bd {  
+    background: var(--cards); 
+    backdrop-filter: blur(10px);    
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 400px; 
+    display: flex;
+    align-items: center;    
+    font-size: 1.1rem;    
+    transition: all 0.3s ease; 
+    flex: 1;
+    min-width: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.frontend-dev ul, .backend-dev ul, .bd ul{
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0; 
+}
+
+.html:hover, .css:hover, .js:hover, .bootstrap:hover, .figma:hover,
+.mysql:hover, .sqlite3:hover, .node:hover, .java:hover, .python:hover{
+    transform: translateY(-5px);
+    border: 1px solid #FFE6E0; 
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+
 #language{
     text-align: center;
     background-color: var(--card-bg);
     padding: 1%;
     border-radius: 15px;
     box-shadow: var(--shadow);
+    margin-top: 100px;
+    backdrop-filter: blur(3px);
 }
 
 #contacto {
@@ -690,4 +790,129 @@ body {
     margin-top: 30px;
     border-radius: 15px;
     box-shadow: var(--shadow);
+    margin-top: 100px;
+    backdrop-filter: blur(3px);
+    padding: 20px;
+}
+
+.social-links a {
+    color: var(--text-primary); 
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:visited {
+    color: var(--text-primary);
+}
+
+.bi-linkedin:hover {
+    color: #0e76a8;
+    opacity: 1;
+}
+
+.bi-envelope:hover{
+    color: rgb(173, 173, 173);
+    opacity: 1;
+}
+
+.contact-form {
+    background-color: var(--cards);
+    border-radius: 15px;
+    width: 90%;         
+    max-width: 500px;    
+    margin: 10px auto;   
+    padding: 20px;   
+    box-shadow: var(--shadow);
+}
+
+.contact-form .mb-3 {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 12px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px 0; 
+}
+
+.contact-form .formlabel {
+    display: block; 
+    color: var(--text-primary);
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    text-align: center; 
+    margin: 0; 
+}
+
+.contact-form .email {
+    display: block; 
+    width: 90%; 
+    max-width: 450px; 
+    background-color: rgba(67, 11, 78, 0.9) !important; 
+    color: white !important;
+    border: 1px solid var(--accent-color); 
+    padding: 14px 24px; 
+    border-radius: 12px; 
+    outline: none;
+    transition: all 0.3s ease; 
+    font-size: 1rem;
+}
+
+.contact-form .email::placeholder {
+    color: rgba(255, 255, 255, 0.5); 
+}
+
+.contact-form .email:focus {
+    box-shadow: #ffffff; 
+    border-color: #ffffff;
+}
+
+.contact-form .form-input {
+    display: block;
+    width: 90%;
+    max-width: 450px;
+    background-color: rgba(67, 11, 78, 0.9) !important;
+    color: white !important;
+    border: 1px solid var(--accent-color);
+    padding: 14px 24px;
+    border-radius: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-family: inherit; 
+}
+
+textarea.form-input {
+    resize: none; 
+    min-height: 120px; 
+    overflow: auto; 
+}
+
+.contact-form .form-input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
+    border-color: #ffffff;
+}
+
+.btn-send {
+    margin-top: 10px;
+    background-color: white;
+    color: #461B09;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(98, 28, 130, 0.919);
+}
+
+footer{
+    text-align: center;
+}
+
+#tecnologias, #experiencia, #sobre-mi, #proyectos, #contacto {
+    scroll-margin-top: 150px; 
 }
