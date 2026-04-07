@@ -1,4 +1,4 @@
-# PORTFOLIO PERSONAL- SOFÍA CARTAGENA
+# MI-PORTFOLIO
 Sitio estatico desarrollado con HTML, CSS3 y js vanilla
 
 # CARACTERISTICAS
