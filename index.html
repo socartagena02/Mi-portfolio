@@ -15,49 +15,109 @@
         <nav>
             <ul>
                 <li><img src="assets/images/izumi-konata.gif" alt="GIF" class="izumi-gif"></li>
-                <li><a href="#sobremi">Sobre mi</a></li>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="/blogs/index.html" target="_blank">Blogs</a></li>
                 <li><a href="#proyectos">Mis proyectos</a></li>
-                <li><a href="#tecnologias">tecnologias</a></li>
                 <li><a href="#contacto">Contacto</a></li>
+                <li><button id="lang-toggle" onclick="toggleLang()">EN</button></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="hero">
             <div class="hero-container">
-                <h2 class="animate__animated animate__fadeInDown">Sofía Paz Cartagena Castro</h2>
-                <p>Ingeniera en informática</p>
-                <button class="btn-download"> Descargar CV <i class="bi bi-download"></i></button>
-                <div class="avatar">
-                    <img src="assets/images/l.png" alt="avatar" class="image-avatar">
-                </div>
+                <h2 class="animate__animated animate__fadeInDown">Hola soy <span>Sofía Cartagena</span></h2>
+                <p>Desarrolladora Full Stack | Integración de IA</p>
+                <a href="./assets/CartagenaSofia.pdf" download="CartagenaSofia2026.pdf"class="btn-download">  Descargar CV <i class="bi bi-download"></i></a>
+                <button class="boton-proyectos"><a href="#proyectos">Ver mis proyectos</a></button>
             </div>
         </section>
         <section id="sobremi">
-            <h2>Sobre mí</h2>
-            <p>Hola mi nombre es Sofía, soy ingeniera en informática. me apasiona resolver problemas complejos mediante el diseño y desarrollo de soluciones de software innovadoras, seguras y sostenibles.
-            </p>
-            <p>
-                Como profesional, aporto una mirada analítica en todo el ciclo de vida del software, destacando en:
-                <ul>
-                    <li><span>Ingeniería de requisitos y calidad:</span> Diseño de procesos bajo estándares de vanguardia.</li>
-                    <li><span>Desarrollo FullStack:</span> Aplicaciones robustas con bases de datos relacionales y tecnologías modernas (Frontend/Backend).</li>
-                    <li><span>Gestión de proyectos: </span> Liderazgo bajo metodologías tradicionales y ágiles (Scrum).</li>
-                    <li><span>Desarrollo web: </span> Soluciones innovadoras aplicando las mejores prácticas de la industria.</li>
-                </ul>
+            <div class="sobremi-layout">
+                <div class="sobremi-texto">
+                    <h2>Sobre mí</h2>
+                    <p>Ingeniera en Informática y desarrolladora full stack, con experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables.
+                        Me especializo en la construcción de soluciones frontend y backend utilizando tecnologías modernas, bases de datos relacionales y buenas prácticas de desarrollo.
+                    </p>
+                    <p>
+                        Destaco en:
+                    </p>
+                        <ul>
+                            <li><span>Desarrollo frontend: </span> Interfaces modernas, responsivas y centradas en la experiencia de usuario.</li>
+                            <li><span>Desarrollo backend: </span> APIs, lógica de negocio e integración de servicios.</li>
+                            <li><span>Bases de datos: </span> Validación de APIs, pruebas de regresión, control de incidencias y mejora continua de la calidad.</li>
+                            <li><span>Metodologías ágiles:</span> Trabajo bajo Scrum y colaboración cercana con equipos de desarrollo.</li>
+                        </ul>
+                        <p>Mi enfoque profesional está orientado a construir software confiable, escalable y centrado en la calidad.</p>
+                </div>            
+                <div class="sobremi-img">
+                    <img src="./assets/images/hello-world.jpg" alt="calico-cat" class="calico">
+                </div>
+            </div>
+        </section>
+        <section id="tecnologias">
+            <h2>Tecnologías</h2>
+            <div class="contenedor-flex">
+                    <div class="frontend-dev">
+                    <h4> Diseño <i class="bi bi-brush"></i></h4>
+                    <ul>
+                        <li class="html">HTML5</li>
+                        <li class="css">CSS3</li>
+                        <li class="figma">Figma</li>
+                    </ul>
+                </div>
+                <div class="backend-dev">
+                    <h4>Lenguajes <i class="bi bi-file-code"></i></h4>
+                    <ul>
+                        <li class="python">Python</li>
+                        <li class="java">Java</li>
+                        <li class="node">Node.js</li>
+                        <li class="js">Javascript</li>
+                    </ul>
+                </div>
+                <div class="bd">
+                    <h4>Base de datos <i class="bi bi-database"></i></h4>
+                    <ul>
+                        <li class="mysql">MySQL</li>
+                        <li class="sqlite3">sqlite3</li>
+                    </ul>
+                </div>
+                <div class="framework">
+                    <h4>Framework & Librerias <i class="bi bi-bootstrap"></i></h4>
+                    <ul>
+                        <li class="Django">Django (backend)</li>
+                        <li class="bootstrap">Bootstrap (css)</li>
+                    </ul>
+                </div>
+                <div class="control">
+                    <h4>Control de versiones <i class="bi bi-git"></i></h4>
+                    <ul>
+                        <li class="GitHub">GitHub</li>
+                        <li class="Git">Git</li>
+                    </ul>
+                </div>
+                <div class="deploy">
+                    <h4>Despliegue <i class="bi bi-rocket-takeoff"></i></h4>
+                    <ul>
+                        <li class="AWS">AWS</li>
+                        <li class="railway">Railway</li>
+                    </ul>
+                </div>
+                
+            </div>
         </section>
         <section id="experience">
             <h2 class="title-section">Experiencia</h2>
             <div class="exp1">
-                <h3>Hospital Geriatrico la paz de la tarde</h3>
+                <h3 data-i18n="exp_hospital">Hospital Geriatrico la paz de la tarde</h3>
                 <h4>Práctica profesional | Sept 2025 <span>-</span> Nov 2025 </h4>
                 <h4>Jornada completa presencial.</h4>
                 <img src="assets/images/hospital-geriatrico.jpg" alt="hospital" class="logo">
                     <ul>
-                        <li><span>Gestión de infraestructura de red:</span> Configuración y despliegue de conectividad cableada e inalámbrica, garantizando la estabilidad de la red local (LAN). </li>
-                        <li><span>Mantenimiento preventivo y correctivo:</span> Resolución de incidencias de hardware y software en las estaciones de trabajo, optimizando el rendimiento de los equipos.</li>
-                        <li><span>Administración de periféricos:</span> Instalación, configuración y “provisionamiento” de sistemas de impresión y dispositivos de red, reduciendo tiempos de inactividad técnica.</li>
-                        <li><span>Soporte multiplataforma:</span> Diagnóstico técnico y alfabetización digital para usuarios finales, facilitando la adopción de nuevas herramientas tecnológicas.</li>
+                        <li data-i18n="exp_li1"><span>Gestión de infraestructura de red:</span> Configuración y despliegue de conectividad cableada e inalámbrica, garantizando la estabilidad de la red local (LAN). </li>
+                        <li data-i18n="exp_li2"><span>Mantenimiento preventivo y correctivo:</span> Resolución de incidencias de hardware y software en las estaciones de trabajo, optimizando el rendimiento de los equipos.</li>
+                        <li data-i18n="exp_li3"><span>Administración de periféricos:</span> Instalación, configuración y “provisionamiento” de sistemas de impresión y dispositivos de red, reduciendo tiempos de inactividad técnica.</li>
+                        <li data-i18n="exp_li4"><span>Soporte multiplataforma:</span> Diagnóstico técnico y alfabetización digital para usuarios finales, facilitando la adopción de nuevas herramientas tecnológicas.</li>
                     </ul>
             </div>
         </section>
@@ -94,8 +154,8 @@
                     </a>
                 </div>
                 <div class="card-content">
-                    <h3>Z-STARS AI <span>-</span> Sitio web</h3>
-                    <p>Herramienta de estimulación cognitiva para pacientes de terapia.</p>
+                    <h3>Z-STARS AI</h3>
+                    <p data-i18n="proy_zstars_desc">Plataforma web de Estimulación cognitiva con minijuegos interactivos e IA.</p>
                     <div class="tag-container">
                         <span class="tag tag-django">Django</span>
                         <span class="tag tag-javascript">Javascript</span>
@@ -103,14 +163,14 @@
                     </div>
                     <div class="button-group">
                         <button class="code"><i class="bi bi-link-45deg"><a
-                                    href="https://github.com/socartagena02/Z-STARS-AI.git" target="_blank"
-                                    rel="noopener noreferrer">Repositorio</a></i></button>
+                            href="https://github.com/socartagena02/Z-STARS-AI.git" target="_blank"
+                            rel="noopener noreferrer">Repositorio</a></i></button>
                         <button class="demo"><i class="bi bi-link-45deg"><a href="https://drive.google.com/drive/folders/1r7_kpYfnWr6WJkrn15d8FZO7U8belXGD?usp=sharing"
-                            target="_blank" rel="noopener noreferrer">Ver demo</a></i></button>
+                            target="_blank" rel="noopener noreferrer">Ver demo</a></i>
+                        </button>
                     </div>
                 </div>
             </div>
-
             <div class="proyecto-card">
                 <div class="img-container">
                     <img src="assets/images/reconocimientoFacial.jpg" alt="Sistema-reconocimiento" class="card-img">
@@ -121,19 +181,19 @@
                 </div>
                 <div class="card-content">
                     <h3>Sistema de reconocimiento facial <span>-</span> Reconocimiento IA</h3>
-                    <p>Herramienta para detectar caras en asistencia.</p>
+                    <p data-i18n="proy_ai">Herramienta para detectar caras en asistencia.</p>
                     <div class="tag-container">
                         <span class="tag tag-python">Python</span>
                         <span class="tag tag-YOLOv8">YOLOv8</span>
                     </div>
                     <div class="button-group">
                         <button class="code"><i class="bi bi-link-45deg"><a
-                                    href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git"
-                                    target="_blank" rel="noopener noreferrer">Repositorio</a></i></button>
+                            href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git"
+                            target="_blank" rel="noopener noreferrer">Repositorio</a></i>
+                        </button>
                     </div>
                 </div>
             </div>
-
             <div class="proyecto-card">
                 <div class="img-container">
                     <img src="assets/images/Starsverse.png" alt="Starverse" class="card-img">
@@ -144,7 +204,7 @@
                 </div>
                 <div class="card-content">
                     <h3>Starsverse <span>-</span> E-commerce</h3>
-                    <p>Una plataforma de compras online para fanaticos del anime.</p>
+                    <p data-i18n="proy_starsverse">Una plataforma de compras online para fanaticos del anime.</p>
                     <div class="tag-container">
                         <span class="tag tag-angular">Angular</span>
                         <span class="tag tag-typescript">Typescript</span>
@@ -161,7 +221,7 @@
             <div class="otros-proyectos">
                 <div class="ver-mas">
                     <a href="#proyectos2" id="btnverMas" style="text-decoration: none; color: inherit;">
-                        <p>Ver más proyectos</p>
+                        <p>Explorar proyectos</p>
                     </a>
                 </div>
             </div>
@@ -180,7 +240,6 @@
                 </div>
             </div>
             <div class="glass-pannel">
-
                 <div class="proyecto-card">
                     <div class="img-container">
                         <img src="assets/images/AgeUp_Games.png" alt="AgeUp_Games" class="card-img">
@@ -191,7 +250,7 @@
                     </div>
                     <div class="card-content">
                         <h3>AgeUp_Games <span>-</span> Proyecto de titulo</h3>
-                        <p>AgeUp_games es un sistema web de minijuegos cognitivos para el adulto mayor.</p>
+                        <p data-i18n="proy_AgeUp">AgeUp_Games es un sistema web de minijuegos cognitivos para el adulto mayor.</p>
                         <div class="tag-container">
                             <span class="tag tag-django">Django</span>
                             <span class="tag tag-javascript">Javascript</span>
@@ -199,12 +258,12 @@
                         </div>
                         <div class="button-group">
                             <button class="code"><i class="bi bi-link-45deg"><a
-                                        href="https://github.com/socartagena02/AgeUp_Game.git" target="_blank"
-                                        rel="noopener noreferrer">Repositorio</a></i></button>
+                                href="https://github.com/socartagena02/AgeUp_Game.git" target="_blank"
+                                rel="noopener noreferrer">Repositorio</a></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-
                 <div class="proyecto-card">
                     <div class="img-container">
                         <img src="assets/images/THE-PARADISE-OF-THE-WHEEL.png" alt="The Paradise of the Wheel"
@@ -216,7 +275,7 @@
                     </div>
                     <div class="card-content">
                         <h3>THE PARADISE OF THE WHEEL <span>APP</span></h3>
-                        <p>The paradise of the wheel es una aplicación movil de viajes para alumnos de la institución.
+                        <p data-i18n="proy_paradise">The paradise of the wheel es una aplicación movil de viajes para alumnos de la institución.
                         </p>
                         <div class="tag-container">
                             <span class="tag tag-ionic">Ionic</span>
@@ -225,8 +284,9 @@
                         </div>
                         <div class="button-group">
                             <button class="code"><i class="bi bi-link-45deg"><a
-                                        href="https://github.com/socartagena02/Proyecto_movil.git" target="_blank"
-                                        rel="noopener noreferrer">Repositorio</a></i></button>
+                                href="https://github.com/socartagena02/Proyecto_movil.git" target="_blank"
+                                rel="noopener noreferrer">Repositorio</a></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -240,45 +300,13 @@
                     </div>
                     <div class="card-content">
                         <h3>Infinity music <span>-</span> bot de discord</h3>
-                        <p>Un bot de discord para escuchar música en tu servidor.</p>
+                        <p data-i18n="music_disc">Un bot de discord para escuchar música en tu servidor.</p>
                         <div class="tag-container">
                             <span class="tag tag-python">Python</span>
                             <span class="tag tag-discord">Discord.py</span>
                             <span class="tag tag-railway">railway</span>
                         </div>
                     </div>
-                </div>
-
-            </div>
-        </section>
-        <section id="tecnologias">
-            <h2>Tecnologías</h2>
-            
-            <div class="contenedor-flex">
-                    <div class="frontend-dev">
-                    <h4>Habilidades de diseño <i class="bi bi-brush"></i></h4>
-                    <ul>
-                        <li class="html">HTML5</li>
-                        <li class="css">CSS3</li>
-                        <li class="js">Javascript</li>
-                        <li class="bootstrap">Bootstrap</li>
-                        <li class="figma">Figma</li>
-                    </ul>
-                </div>
-                <div class="backend-dev">
-                    <h4>Programación <i class="bi bi-file-code"></i></h4>
-                    <ul>
-                        <li class="python">Python</li>
-                        <li class="java">Java</li>
-                        <li class="node">Node.js</li>
-                    </ul>
-                </div>
-                <div class="bd">
-                    <h4>Base de datos <i class="bi bi-database"></i></h4>
-                    <ul>
-                        <li class="mysql">MySQL</li>
-                        <li class="sqlite3">sqlite3</li>
-                    </ul>
                 </div>
             </div>
         </section>
@@ -290,34 +318,54 @@
                     <p>Nativo</p>
                 </div>
                 <div class="english">
-                    <h3>inglés</h3>
-                    <p>inglés B2</p>
+                    <h3>Inglés</h3>
+                    <p>Inglés intermedio B2</p>
                 </div>
             </div>
         </section>
         <section id="contacto">
-            <h2>Contacto</h2>
-            <form action="submit" class="contact-form">
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/sofía-cartagena-ti/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                    <a href="mailto:sofiacarcastro@gmail.com" aria-label="Enviar correo"><i class="bi bi-envelope"></i></a>
+        <h2>Trabajemos juntos</h2>
+            <div class="contacto-layout">
+                <form action="#" class="contact-form">
+                    <span data-i18n="contacto_subtitulo">Enviame un mensaje</span>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nombre completo</label>
+                        <input type="text" class="form-input" id="name" required>
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" class="form-input" id="email" required>
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea class="form-input" id="message" rows="4" required></textarea>
+                    </div>
+                    <button class="btn-send">Enviar <i class="bi bi-send"></i></button>
+                </form>
+
+                <div class="contacto-derecha">
+                    <div class="descripcion">
+                        <p>Siempre dispuesta a discutir nuevas oportunidades, proyectos creativos o colaboraciones.
+                            Ya sea que tengas un proyecto en mente o quieras explorar posibilidades, me encantaria 
+                            conectar.
+                            <ul>
+                                <li>Desarrollo web.</li>
+                                <li>Diseño UI/UX.</li>
+                                <li>Consultorías Técnicas.</li>
+                                <li>Charlas y talleres.</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="social-links">
+                        <h3 data-i18n="social-media">Mis redes</h3>
+                        <a href="https://www.linkedin.com/in/sofía-cartagena-ti/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                        <a href="mailto:sofiacarcastro@gmail.com" aria-label="Enviar correo"><i class="bi bi-envelope"></i></a>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Nombre completo</label>
-                    <input type="text" class="form-input" id="name" required>
-                    <label for="email" class="form-label">Correo electrónico</label>
-                    <input type="email" class="form-input" id="email" required>
-                    <label for="message" class="form-label">Mensaje</label>
-                    <textarea class="form-input" id="message" rows="4" required></textarea>
-                </div>
-                <button class="btn-send">Enviar <i class="bi bi-send"></i></button>
-            </form>
+            </div>
         </section>
     </main>
     <footer>
         <p>&copy; 2026 Sofía Cartagena</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="assets/js/main.js" defer></script>
 </body>
 </html>

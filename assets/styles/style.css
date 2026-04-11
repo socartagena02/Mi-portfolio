@@ -1,13 +1,13 @@
 :root {
-    --bg-color: #1E0F33;
     --card-bg: #2b0732bc;
     --text-primary: #f5f5f5;
     --accent-color: #ff80aa71;
     --nav-bg: rgba(255, 255, 255, 0.8);
     --nav-bg: rgba(61, 43, 69, 0.9);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    --cards: #430b4e92;
-    --cards-tech: #8c19a255 ;
+    --cards: #121212;
+    --cards-tech: #121212 ;
+    --border: #c81c9193;
 }
 
 * {     
@@ -64,6 +64,22 @@ nav li:first-child {
     margin-right: auto;
 }
 
+#lang-toggle {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: var(--text-primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#lang-toggle:hover {
+    border-color: #DB1690;
+    color: #DB1690;
+}
+
 .izumi-gif{
     width: 35px;
     height: 35px;
@@ -90,7 +106,7 @@ body {
 
 #hero {
     scroll-margin-top: 80px;
-    background-color: var(--card-bg);
+    background-color: transparent;
     margin-top: 295px;
     border-radius: 15px;
     padding: 100px;
@@ -114,53 +130,63 @@ body {
     position: relative;
 }
 
-.avatar {
-  position: absolute;
-  right: 4rem;
-  top: 50%;
-  transform: translateY(-50%);  
-  bottom: auto;
+.hero-container span{
+    color: #DB1690;
 }
 
-.image-avatar {
-  width: auto;
-  height: 330px;  
-  object-fit: contain;
-  display: block;
-  right: 2rem
-}
 #sobremi {
     scroll-margin-top: 80px;
     padding: 2%;
-    background-color: var(--card-bg);
+    background-color: transparent;
     border-radius: 15px;
     margin-top: 320px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(3px);
 }
 
-#sobremi h2{
+.sobremi-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.sobremi-texto {
+    flex: 1;
+    min-width: 280px;
+    max-width: 700px;
+}
+
+.sobremi-texto h2 {
     text-align: center;
+    margin-bottom: 16px;
 }
 
-#sobremi p{
-    text-align: left;
-    font-size: 20px;
-    max-width:1180px;
-    margin: auto;
-}
-#sobremi li{
-    font-size: 20px;
-    max-width:1180px;
-    margin: auto;
+.sobremi-texto p,
+.sobremi-texto li {
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-#sobremi span{
+.sobremi-texto span {
     font-weight: bold;
 }
 
+.sobremi-imagen {
+    flex: 0 0 200px; 
+    max-width: 200px; 
+    overflow: hidden;
+}
+
+
+.sobremi-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
 #experience{
-    background-color: var(--card-bg);
+    background-color: transparent;
     width: 100%; 
     padding: 40px 0;
     display: flex;
@@ -170,6 +196,7 @@ body {
     overflow: hidden;
     margin-top: 60px;
     backdrop-filter: blur(3px);
+    margin-top: 250px;
 }
 
 .exp1 {
@@ -177,6 +204,7 @@ body {
     background-color: var(--cards);
     border-radius: 10px;
     padding: 25px;
+    border: 1px solid #2a2a2a;
 }
 
 .exp1::after {
@@ -219,7 +247,7 @@ body {
 }
 
 #education {
-    background-color: var(--card-bg);
+    background-color: transparent;
     width: 100%; 
     padding: 40px 0;
     display: flex;
@@ -229,6 +257,7 @@ body {
     overflow: hidden;
     margin-top: 80px;
     backdrop-filter: blur(3px);
+    
 }
 
 .duocUC {
@@ -239,8 +268,9 @@ body {
     background-color: var(--cards);
     padding: 25px;
     border-radius: 10px;
-    width: 750px;            
+    width: 900px;            
     margin: 20px auto;
+    border: 1px solid #2a2a2a;
 }
 
 .duocUC h4{
@@ -282,7 +312,7 @@ body {
     justify-content: center;
     gap: 15px;
     padding: 20px 5px;
-    background-color: var(--card-bg);
+    background-color: transparent;
     border-radius: 15px;
     box-shadow: var(--shadow);
     margin-top: 100px;
@@ -304,6 +334,7 @@ body {
     overflow: hidden;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: 0.3s;
+    border: 1px solid #2a2a2a;
 }
 
 .proyecto-card:hover {
@@ -314,10 +345,12 @@ body {
 .proyecto-card button {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #421669;
+    background-color: #ab2380;
     color: white;
     text-decoration: none;
     border-radius: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
 }
 
 .proyecto-card h3 {
@@ -332,7 +365,8 @@ body {
 }
 
 .proyecto-card button:hover {
-    border-color: #6520a1;
+    background-color: #92196c;
+    border: 1px solid #8f126793;
     filter: none;
     transform: translateY(-5px);
 }
@@ -384,11 +418,28 @@ body {
     padding: 10px 20px;
     border-radius: 25px;
     cursor: pointer;
+    font-size: 1.1rem;
+    text-decoration: none;
 }
 
-.btn-download:hover {
+.btn-download:hover, .boton-proyectos:hover {
     transform: translateY(-5px);
-    box-shadow: 0 0 15px rgba(98, 28, 130, 0.919);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.919);
+}
+
+.boton-proyectos{
+    margin-top: 10px;
+    background-color: transparent;
+    border: 1px solid #AB118C;
+    padding: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;  
+}
+
+.boton-proyectos a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
 }
 
 .tag-container {
@@ -399,6 +450,7 @@ body {
 }
 
 .tag {
+    border: 1px solid var(--border);
     padding: 4px 12px;
     border-radius: 15px;
     font-size: 0.8rem;
@@ -592,6 +644,7 @@ body {
 
 .KDE-plasmafolder .proyecto-card {
     background: var(--cards);
+    border: 1px solid #2a2a2a;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: none;
@@ -602,7 +655,6 @@ body {
 
 .KDE-plasmafolder .proyecto-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(61, 174, 233, 0.35);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
@@ -657,10 +709,12 @@ body {
 .KDE-plasmafolder .proyecto-card button {
     display: inline-block;
     padding: 5px 10px;
-    background-color: #421669;
+    background-color: #ab2380;
     color: white;
     text-decoration: none;
     border-radius: 20px;
+    border: 1px solid var(--border);
+    cursor: pointer;
 }
 
 .KDE-plasmafolder .proyecto-card button:hover {
@@ -719,8 +773,9 @@ body {
     gap: 10px;                
     width: 100%;
     padding: 0; 
-    margin-top: 60px;
+    margin-top: 100px;
     background: transparent; 
+    backdrop-filter: blur(3px);
 }  
 .contenedor-flex {
     display: flex;         
@@ -737,62 +792,152 @@ body {
     margin: 0;
 }
 
-.frontend-dev, .backend-dev, .bd {  
+.frontend-dev, .backend-dev, .bd, .framework, .control, .deploy{  
     background: var(--cards); 
     backdrop-filter: blur(10px);    
     border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    border-radius: 15px;
-    max-width: 400px; 
     display: flex;
+    flex-direction: column; 
     align-items: center;    
-    font-size: 1.1rem;    
-    transition: all 0.3s ease; 
-    flex: 1;
-    min-width: 200px;
-    flex-direction: column;
-    justify-content: space-between;
-
-}
-
-.frontend-dev ul, .backend-dev ul, .bd ul{
-    font-size: 1.2rem;
-    display: flex;
     justify-content: center;
-    gap: 20px; 
-    list-style: none;
-    padding: 0;
-    margin: 10px 0 0 0; 
+    text-align: center;
+    padding: 20px;         
+    width: 100%;           
+    max-width: 350px;     
+    min-height: auto;      
+    gap: 15px;
+    border-radius: 15px;
 }
 
-.html:hover, .css:hover, .js:hover, .bootstrap:hover, .figma:hover,
-.mysql:hover, .sqlite3:hover, .node:hover, .java:hover, .python:hover{
-    transform: translateY(-5px);
-    border: 1px solid #FFE6E0; 
-    border-radius: 5px;
+.frontend-dev ul, .backend-dev ul, .bd ul, .framework ul, .control ul, .deploy ul {
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;      
+    justify-content: center; 
+    gap: 10px;
+    width: 100%;            
+    padding: 0;
+    margin: 0;
+}
+.frontend-dev ul li, .backend-dev ul li, .bd ul li, .framework ul li, .control ul li,
+.deploy ul li {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    padding: 6px 15px;     
+    border-radius: 8px;
+    font-size: 0.85rem;     
+    list-style: none;       
     transition: all 0.3s ease;
 }
 
-
+.html:hover, .css:hover, .js:hover, .bootstrap:hover, .figma:hover,
+.mysql:hover, .sqlite3:hover, .node:hover, .java:hover, .python:hover, .Django:hover,
+.GitHub:hover, .Git:hover, .AWS:hover, .railway:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 0 1px #FFE6E0; 
+}
 #language{
     text-align: center;
-    background-color: var(--card-bg);
-    padding: 1%;
+    background-color: transparent;
+    padding: 1;
     border-radius: 15px;
     box-shadow: var(--shadow);
     margin-top: 100px;
     backdrop-filter: blur(3px);
 }
 
+#language h2{
+    margin-top: 10px;
+}
+
+.contenedor-flex {
+    justify-content: center;
+}
+
+.spanish, .english{
+    background: transparent; 
+    backdrop-filter: blur(10px);    
+    border: 1px solid var(--border);
+    padding: 25px 40px;
+    border-radius: 15px;
+    max-width: 250px; 
+    display: flex;
+    align-items: center;    
+    font-size: 1.2rem;    
+    transition: all 0.3s ease; 
+    flex: 0 1 250px;
+    min-width: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 #contacto {
     text-align: center;
-    background-color: var(--card-bg);
+    background-color: transparent;
     margin-top: 30px;
     border-radius: 15px;
     box-shadow: var(--shadow);
     margin-top: 100px;
     backdrop-filter: blur(3px);
     padding: 20px;
+}
+
+.contacto-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 280px;
+    max-width: 450px;
+    background-color: transparent;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+
+.contacto-derecha {
+    flex: 0 1 350px;
+    min-width: 280px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: stretch; 
+    justify-content: center;
+}
+
+
+.social-links {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    align-self: unset;
+    gap: 15px;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+
+.descripcion {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
 }
 
 .social-links a {
@@ -813,16 +958,6 @@ body {
 .bi-envelope:hover{
     color: rgb(173, 173, 173);
     opacity: 1;
-}
-
-.contact-form {
-    background-color: var(--cards);
-    border-radius: 15px;
-    width: 90%;         
-    max-width: 500px;    
-    margin: 10px auto;   
-    padding: 20px;   
-    box-shadow: var(--shadow);
 }
 
 .contact-form .mb-3 {
@@ -872,7 +1007,7 @@ body {
     display: block;
     width: 90%;
     max-width: 450px;
-    background-color: rgba(67, 11, 78, 0.9) !important;
+    background-color: #000000 !important;
     color: white !important;
     border: 1px solid var(--accent-color);
     padding: 14px 24px;
@@ -891,7 +1026,7 @@ textarea.form-input {
 
 .contact-form .form-input:focus {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); 
-    border-color: #ffffff;
+    border-color: #b90d8283;
 }
 
 .btn-send {
@@ -913,6 +1048,81 @@ footer{
     text-align: center;
 }
 
-#tecnologias, #experiencia, #sobre-mi, #proyectos, #contacto {
+#tecnologias, #experience, #sobre-mi, #proyectos, #contacto {
     scroll-margin-top: 150px; 
+}
+
+@media (max-width: 768px) {
+
+    #hero {
+        margin-top: 100px;
+        padding: 40px 20px;
+    }
+
+    .exp1 {
+        width: 90%;
+    }
+
+    .duocUC {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-collague {
+        width: 100px;
+    }
+
+    .contenedor-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .frontend-dev, .backend-dev, .bd {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .proyectos-container {
+        margin-top: 40px;
+        padding: 15px;
+    }
+
+    .proyecto-card {
+        width: 90%;
+    }
+
+    .contact-form {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    nav a {
+        padding: 0 12px;
+        font-size: 14px;
+    }
+
+    #proyectos2.KDE-plasmafolder {
+        width: 95%;
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+
+    .glass-pannel {
+        padding: 20px 10px;
+        gap: 16px;
+    }
+
+    .KDE-plasmafolder .proyecto-card {
+        width: 100%;
+    }
+    .dot {
+        width: 18px;
+        height: 18px;
+    }
 }
