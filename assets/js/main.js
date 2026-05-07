@@ -32,6 +32,12 @@ async function loadParticles() {
 
 loadParticles();
 
+window.addEventListener('load', () => {
+  const loader = document.getElementById('loader');
+  loader.style.opacity = '0';
+  setTimeout(() => loader.style.display = 'none', 500);
+});
+
 let lastScrollTop = 0;
 const navbar= document.querySelector("nav")
 
@@ -104,7 +110,7 @@ const translations = {
         nav_tecnologias: "Tecnologías",
         nav_contacto: "Contacto",
         hero_titulo: "Hola soy <span>Sofía Cartagena</span>",
-        hero_subtitulo: "Full Stack developer| Integración de IA",
+        hero_subtitulo: "Ingeniera en informática | Desarrolladora Full Stack",
         hero_cv: "Descargar CV",
         hero_proyectos: "Ver mis proyectos",
         sobre_titulo: "Sobre mí",
@@ -159,7 +165,7 @@ const translations = {
         proy_starsverse: "Una plataforma de compras online para fanáticos del anime.",
         proy_AgeUp: "AgeUp_Games es un sistema web de minijuegos cognitivos para el adulto mayor.",
         proy_paradise: "The Paradise of the Wheel es una aplicación móvil de viajes para alumnos de la institución.",
-        music_disc: "Un bot de Discord para escuchar música en tu servidor.",
+        music_disc: "Plataforma online gamificada social.",
         contacto_subtitulo: "Envíame un mensaje"
     },
     en: {
@@ -169,7 +175,7 @@ const translations = {
         nav_tecnologias: "Technologies",
         nav_contacto: "Contact",
         hero_titulo: "Hi, I'm <span>Sofía Cartagena</span>",
-        hero_subtitulo: "Full Stack Developer | AI Integration",
+        hero_subtitulo: "Computer Science | Full Stack Developer",
         hero_cv: "Download CV",
         hero_proyectos: "View my projects",
         sobre_titulo: "About Me",
@@ -224,7 +230,7 @@ const translations = {
         proy_starsverse: "An online shopping platform for anime fans.",
         proy_AgeUp: "AgeUp_Games is a web-based cognitive mini-game system for the elderly.",
         proy_paradise: "The Paradise of the Wheel is a mobile travel app for students of the institution.",
-        music_disc: "A Discord bot for listening to music in your server.",
+        music_disc: "Social gamified online platform.",
         contacto_subtitulo: "Send me a message",
     }
 };
@@ -311,3 +317,13 @@ function toggleLang() {
 
 const savedLang = localStorage.getItem('lang') || 'es';
 applyLang(savedLang);
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));

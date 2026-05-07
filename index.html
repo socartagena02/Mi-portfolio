@@ -10,6 +10,9 @@
       <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
     <div id="tsparticles"></div>
     <header>
         <nav>
@@ -27,12 +30,17 @@
         <section id="hero">
             <div class="hero-container">
                 <h2 class="animate__animated animate__fadeInDown">Hola soy <span>Sofía Cartagena</span></h2>
-                <p>Desarrolladora Full Stack | Integración de IA</p>
-                <a href="./assets/CartagenaSofia.pdf" download="CartagenaSofia2026.pdf"class="btn-download">  Descargar CV <i class="bi bi-download"></i></a>
+                <p>Ingeniera en informática | Desarrolladora Full Stack</p>
+                <a href="./assets/CartagenaSofia_CV.pdf" download="CartagenaSofia2026.pdf"class="btn-download">  Descargar CV <i class="bi bi-download"></i></a>
                 <button class="boton-proyectos"><a href="#proyectos">Ver mis proyectos</a></button>
             </div>
         </section>
-        <section id="sobremi">
+       <div class="arrow-container">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+                <a href="#sobremi"><polyline points="16,20 24,28 32,20" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></a>
+            </svg>
+        </div>
+        <section id="sobremi" class="animate-on-scroll">
             <div class="sobremi-layout">
                 <div class="sobremi-texto">
                     <h2>Sobre mí</h2>
@@ -55,7 +63,7 @@
                 </div>
             </div>
         </section>
-        <section id="tecnologias">
+        <section id="tecnologias" class="animate-on-scroll">
             <h2>Tecnologías</h2>
             <div class="contenedor-flex">
                     <div class="frontend-dev">
@@ -101,12 +109,13 @@
                     <ul>
                         <li class="AWS">AWS</li>
                         <li class="railway">Railway</li>
+                        <li class="railway">Render</li>
                     </ul>
                 </div>
                 
             </div>
         </section>
-        <section id="experience">
+        <section id="experience" class="animate-on-scroll">
             <h2 class="title-section">Experiencia</h2>
             <div class="exp1">
                 <h3 data-i18n="exp_hospital">Hospital Geriatrico la paz de la tarde</h3>
@@ -121,7 +130,7 @@
                     </ul>
             </div>
         </section>
-        <section id="education">
+        <section id="education" class="animate-on-scroll">
             <h2 class="title-section">Educación</h2>
             <div class="duocUC">
                 <img src="assets/images/logo-duoc.png" alt="collague" class="logo-collague">
@@ -143,7 +152,7 @@
                 </div>
             </div>
         </section>
-        <section id="proyectos" class="proyectos-container">
+        <section id="proyectos" class="proyectos-container" class="animate-on-scroll">
             <h2>Mis proyectos</h2>
             <div class="proyecto-card">
                 <div class="img-container">
@@ -165,31 +174,8 @@
                         <button class="code"><i class="bi bi-link-45deg"><a
                             href="https://github.com/socartagena02/Z-STARS-AI.git" target="_blank"
                             rel="noopener noreferrer">Repositorio</a></i></button>
-                        <button class="demo"><i class="bi bi-link-45deg"><a href="https://drive.google.com/drive/folders/1r7_kpYfnWr6WJkrn15d8FZO7U8belXGD?usp=sharing"
+                        <button class="demo"><i class="bi bi-link-45deg"><a href="https://z-stars-ai.onrender.com"
                             target="_blank" rel="noopener noreferrer">Ver demo</a></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="proyecto-card">
-                <div class="img-container">
-                    <img src="assets/images/reconocimientoFacial.jpg" alt="Sistema-reconocimiento" class="card-img">
-                    <a href="https://www.notion.so/Reconocimiento-facial-x-IA-1e28b5a8edab8017bab3f256d425cc2d?source=copy_link"
-                        target="_blank" class="figma-link">
-                        <i class="bi bi-figma"></i> Ver notion
-                    </a>
-                </div>
-                <div class="card-content">
-                    <h3>Sistema de reconocimiento facial <span>-</span> Reconocimiento IA</h3>
-                    <p data-i18n="proy_ai">Herramienta para detectar caras en asistencia.</p>
-                    <div class="tag-container">
-                        <span class="tag tag-python">Python</span>
-                        <span class="tag tag-YOLOv8">YOLOv8</span>
-                    </div>
-                    <div class="button-group">
-                        <button class="code"><i class="bi bi-link-45deg"><a
-                            href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git"
-                            target="_blank" rel="noopener noreferrer">Repositorio</a></i>
                         </button>
                     </div>
                 </div>
@@ -216,6 +202,27 @@
                     </div>
                 </div>
             </div>
+            <div class="proyecto-card">
+                    <div class="img-container">
+                        <img src="assets/images/infinityMusic-bot.jpg" alt="Infinity-music" class="card-img">
+                        <a href="https://www.figma.com/design/WECq6FinGep31uWPC6Drkr/Prototipo---Sistema-RPG-tipo-red-social?node-id=0-1&t=txFneGlYYqJjLzlL-1" target="_blank" class="figma-link notion-fix">
+                            <i class="bi bi-figma"></i> Ver Figma
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Plataforma Social gamificada</h3>
+                        <p data-i18n="music_disc">Plataforma online gamificada social.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-react">React</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="code"><i class="bi bi-link-45deg"><a
+                                href="https://github.com/socartagena02/Socia-gamificada_app.git"
+                                target="_blank" rel="noopener noreferrer">Repositorio</a></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
         </section>
         <section>
             <div class="otros-proyectos">
@@ -240,6 +247,29 @@
                 </div>
             </div>
             <div class="glass-pannel">
+                <div class="proyecto-card">
+                    <div class="img-container">
+                        <img src="assets/images/reconocimientoFacial.jpg" alt="Sistema-reconocimiento" class="card-img">
+                        <a href="https://www.notion.so/Reconocimiento-facial-x-IA-1e28b5a8edab8017bab3f256d425cc2d?source=copy_link"
+                            target="_blank" class="figma-link">
+                            <i class="bi bi-figma"></i> Ver notion
+                        </a>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sistema de reconocimiento facial <span>-</span> Reconocimiento IA</h3>
+                        <p data-i18n="proy_ai">Herramienta para detectar caras en asistencia.</p>
+                        <div class="tag-container">
+                            <span class="tag tag-python">Python</span>
+                            <span class="tag tag-YOLOv8">YOLOv8</span>
+                        </div>
+                        <div class="button-group">
+                            <button class="code"><i class="bi bi-link-45deg"><a
+                                href="https://github.com/socartagena02/Sistema-de-reconocimiento-facial.git"
+                                target="_blank" rel="noopener noreferrer">Repositorio</a></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
                 <div class="proyecto-card">
                     <div class="img-container">
                         <img src="assets/images/AgeUp_Games.png" alt="AgeUp_Games" class="card-img">
@@ -290,27 +320,9 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="proyecto-card">
-                    <div class="img-container">
-                        <img src="assets/images/infinityMusic-bot.jpg" alt="Infinity-music" class="card-img">
-                        <a href="#" target="_blank" class="figma-link notion-fix">
-                            <i class="bi bi-figma"></i> Visitar página
-                        </a>
-                    </div>
-                    <div class="card-content">
-                        <h3>Infinity music <span>-</span> bot de discord</h3>
-                        <p data-i18n="music_disc">Un bot de discord para escuchar música en tu servidor.</p>
-                        <div class="tag-container">
-                            <span class="tag tag-python">Python</span>
-                            <span class="tag tag-discord">Discord.py</span>
-                            <span class="tag tag-railway">railway</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
-        <section id="language">
+        <section id="language" class="animate-on-scroll">
             <h2>Idiomas</h2>
             <div class="contenedor-flex">
                 <div class="spanish">
@@ -323,7 +335,7 @@
                 </div>
             </div>
         </section>
-        <section id="contacto">
+        <section id="contacto" class="animate-on-scroll">
         <h2>Trabajemos juntos</h2>
             <div class="contacto-layout">
                 <form action="#" class="contact-form">
@@ -355,7 +367,7 @@
                     <div class="social-links">
                         <h3 data-i18n="social-media">Mis redes</h3>
                         <a href="https://www.linkedin.com/in/sofía-cartagena-ti/" target="_blank"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:sofiacarcastro@gmail.com" aria-label="Enviar correo"><i class="bi bi-envelope"></i></a>
+                        <a href="mailto:sofiacarportfolio@outlock.com" aria-label="Enviar correo"><i class="bi bi-envelope"></i></a>
                     </div>
                 </div>
             </div>
