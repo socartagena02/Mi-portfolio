@@ -534,6 +534,19 @@ body {
     box-shadow: 0 0 15px #FAAE40;
 }
 
+.tag-PostgreSQL:hover{
+    background-color: #396C94 !important;
+    color: white;
+    box-shadow: 0 0 15px white;
+}
+
+.status {
+    color: #888;
+    font-size: 0.9em;
+    margin-left: 8px;
+    font-style: italic;
+}
+
 .button-group {
     margin-top: auto;
     padding-top: 5px;

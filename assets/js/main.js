@@ -154,12 +154,15 @@ const translations = {
         exp_li2: "<span>Mantenimiento preventivo y correctivo:</span> Resolución de incidencias de hardware y software en las estaciones de trabajo, optimizando el rendimiento de los equipos.",
         exp_li3: "<span>Administración de periféricos:</span> Instalación, configuración y \"provisionamiento\" de sistemas de impresión y dispositivos de red, reduciendo tiempos de inactividad técnica.",
         exp_li4: "<span>Soporte multiplataforma:</span> Diagnóstico técnico y alfabetización digital para usuarios finales, facilitando la adopción de nuevas herramientas tecnológicas.",
+        proy_zstars:"Z-STARS AI - Plataforma web de Estimulación cognitiva.",
         proy_zstars_desc: "Plataforma web de Estimulación cognitiva con minijuegos interactivos e IA.",
         proy_ai: "Herramienta para detectar caras en asistencia.",
+        proy_stars:"Starsverse - Página web e-commerce automatizado.",
         proy_starsverse: "Una plataforma de compras online para fanáticos del anime.",
         proy_AgeUp: "AgeUp_Games es un sistema web de minijuegos cognitivos para el adulto mayor.",
         proy_paradise: "The Paradise of the Wheel es una aplicación móvil de viajes para alumnos de la institución.",
-        music_disc: "Plataforma online gamificada social.",
+        App_social: "Red social gamificada - Full-Stack Mobile",
+        music_disc: "App móvil con backend API para interacción social gamificada en equipo.",
         contacto_subtitulo: "Envíame un mensaje"
     },
     en: {
@@ -213,12 +216,15 @@ const translations = {
         exp_li2: "<span>Preventive and corrective maintenance:</span> Resolution of hardware and software incidents on workstations, optimizing equipment performance.",
         exp_li3: "<span>Peripheral administration:</span> Installation, configuration and provisioning of printing systems and network devices, reducing technical downtime.",
         exp_li4: "<span>Cross-platform support:</span> Technical diagnosis and digital literacy for end users, facilitating adoption of new technological tools.",
+        proy_zstars:"Z-STARS AI - Cognitive stimulation web platform.",
         proy_zstars_desc: "Web platform for cognitive stimulation with interactive mini-games and AI.",
         proy_ai: "Tool for detecting faces in attendance tracking.",
         proy_starsverse: "An online shopping platform for anime fans.",
+        proy_stars:"Starsverse - Automated e-commerce website.",
         proy_AgeUp: "AgeUp_Games is a web-based cognitive mini-game system for the elderly.",
         proy_paradise: "The Paradise of the Wheel is a mobile travel app for students of the institution.",
-        music_disc: "Social gamified online platform.",
+        App_social: "Gamified social network - Full-Stack Mobile",
+        music_disc: "Mobile app with an API backend for gamified team-based social interaction.",
         contacto_subtitulo: "Send me a message",
     }
 };
