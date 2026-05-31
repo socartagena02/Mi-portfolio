@@ -114,29 +114,24 @@ const translations = {
         hero_cv: "Descargar CV",
         hero_proyectos: "Ver mis proyectos",
         sobre_titulo: "Sobre mí",
-        sobre_p1: "Ingeniera en Informática y desarrolladora full stack, con experiencia en el diseño y desarrollo de aplicaciones web robustas y escalables. Me especializo en la construcción de soluciones frontend y backend utilizando tecnologías modernas, bases de datos relacionales y buenas prácticas de desarrollo.",
-        sobre_p2: "Destaco en:",
-        sobre_li1: "<span>Desarrollo frontend:</span> Interfaces modernas, responsivas y centradas en la experiencia de usuario.",
-        sobre_li2: "<span>Desarrollo backend:</span> APIs, lógica de negocio e integración de servicios.",
-        sobre_li3: "<span>Bases de datos:</span> Validación de APIs, pruebas de regresión, control de incidencias y mejora continua de la calidad.",
-        sobre_li4: "<span>Metodologías ágiles:</span> Trabajo bajo Scrum y colaboración cercana con equipos de desarrollo.",
-        sobre_p3: "Mi enfoque profesional está orientado a construir software confiable, escalable y centrado en la calidad.",
+        sobre_p1: "Ingeniera en informática especializada en desarrollo full-stack con foco en backend utilizando Python, Django y PostgreSQL. He desarrollado aplicaciones web, APIs REST y soluciones orientadas a la automatización y gestión de información.",
+        sobre_p2: "Complemento mis conocimientos backend con experiencia en tecnologías frontend como Angular, TypeScript y React Native, participando en el desarrollo de interfaces modernas y aplicaciones multiplataformas",
+        sobre_h3:"Me interesa construir software estable, mantenible y centrado en resolver problemas reales.",
         exp_titulo: "Experiencia",
-        exp_cargo: "Práctica profesional | Sept 2025 - Nov 2025",
-        exp_jornada: "Jornada completa presencial.",
+        exp_cargo: "Sept 2025 - Nov 2025 | Jornada completa",
         edu_titulo: "Educación",
         edu_carrera: "Ingeniería en Informática",
         edu_fecha: "Mar 2022 - Dic 2025",
         cert_titulo: "Certificaciones",
         proy_titulo: "Mis proyectos",
         tec_titulo: "Tecnologías",
-        tec_diseno: "Diseño",
-        tec_lenguajes: "Lenguajes",
+        tec_diseno: "Frontend",
+        tec_lenguajes: "Backend",
         tec_bd: "Base de datos",
-        tec_framework: "Framework & Librerías",
-        tec_control: "Control de versiones",
-        tec_deploy: "Despliegue",
-        proy_explorar: "Explorar proyectos",
+        tec_framework: "Framework",
+        tec_control: "Herramientas",
+        tec_deploy: "Infraestructura",
+        proy_explorar: "Explorar mas proyectos",
         idiomas_titulo: "Idiomas",
         idiomas_es: "Español",
         idiomas_es_nivel: "Nativo",
@@ -151,9 +146,8 @@ const translations = {
         contacto_desc: "Siempre dispuesta a discutir nuevas oportunidades, proyectos creativos o colaboraciones. Ya sea que tengas un proyecto en mente o quieras explorar posibilidades, me encantaría conectar.",
         contacto_li1: "Desarrollo web.",
         contacto_li2: "Diseño UI/UX.",
-        contacto_li3: "Consultorías Técnicas.",
-        contacto_li4: "Charlas y talleres.",
-        redes: "Mis redes",
+        contacto_li3: "APIs REST.",
+        contacto_li4: "Desarrollo aplicaciones.",
         footer: "© 2026 Sofía Cartagena",
         exp_hospital: "Hospital Geriátrico La Paz de la Tarde",
         exp_li1: "<span>Gestión de infraestructura de red:</span> Configuración y despliegue de conectividad cableada e inalámbrica, garantizando la estabilidad de la red local (LAN).",
@@ -175,33 +169,28 @@ const translations = {
         nav_tecnologias: "Technologies",
         nav_contacto: "Contact",
         hero_titulo: "Hi, I'm <span>Sofía Cartagena</span>",
-        hero_subtitulo: "Computer Science | Full Stack Developer",
+        hero_subtitulo: "Computer Engineer | Full Stack Developer",
         hero_cv: "Download CV",
         hero_proyectos: "View my projects",
         sobre_titulo: "About Me",
-        sobre_p1: "Software Engineer and full stack developer, with experience designing and developing robust, scalable web applications. I specialize in building frontend and backend solutions using modern technologies, relational databases, and development best practices.",
-        sobre_p2: "I stand out in:",
-        sobre_li1: "<span>Frontend development:</span> Modern, responsive interfaces focused on user experience.",
-        sobre_li2: "<span>Backend development:</span> APIs, business logic, and service integration.",
-        sobre_li3: "<span>Databases:</span> API validation, regression testing, incident management, and continuous quality improvement.",
-        sobre_li4: "<span>Agile methodologies:</span> Working under Scrum and close collaboration with development teams.",
-        sobre_p3: "My professional approach is focused on building reliable, scalable, quality-driven software.",
+        sobre_p1: "Computer Engineer specializing in full-stack development with a focus on backend using Python, Django, and PostgreSQL. I have developed web applications, REST APIs, and solutions focused on automation and information management.",
+        sobre_p2: "I complement my backend expertise with experience in frontend technologies such as Angular, TypeScript, and React Native, contributing to the development of modern interfaces and cross-platform applications.",
+        sobre_h3:"I'm committed to building stable, maintainable software that focuses on solving real-world problems.",
         exp_titulo: "Experience",
-        exp_cargo: "Professional Internship | Sept 2025 - Nov 2025",
-        exp_jornada: "Full-time, on-site.",
+        exp_cargo: "Sept 2025 - Nov 2025 | Full-time",
         edu_titulo: "Education",
         edu_carrera: "Computer Engineering",
         edu_fecha: "Mar 2022 - Dec 2025",
         cert_titulo: "Certifications",
         proy_titulo: "My Projects",
         tec_titulo: "Technologies",
-        tec_diseno: "Design",
-        tec_lenguajes: "Languages",
+        tec_diseno: "Frontend",
+        tec_lenguajes: "Backend",
         tec_bd: "Databases",
-        tec_framework: "Frameworks & Libraries",
-        tec_control: "Version Control",
-        tec_deploy: "Deployment",
-        proy_explorar: "Explore projects",
+        tec_framework: "Frameworks",
+        tec_control: "DevTools",
+        tec_deploy: "Infrastructure",
+        proy_explorar: "Explore more projects",
         idiomas_titulo: "Languages",
         idiomas_es: "Spanish",
         idiomas_es_nivel: "Native",
@@ -216,9 +205,8 @@ const translations = {
         contacto_desc: "Always open to discussing new opportunities, creative projects, or collaborations. Whether you have a project in mind or just want to explore possibilities, I'd love to connect.",
         contacto_li1: "Web Development.",
         contacto_li2: "UI/UX Design.",
-        contacto_li3: "Technical Consulting.",
-        contacto_li4: "Talks & Workshops.",
-        redes: "My Socials",
+        contacto_li3: "REST APIs.",
+        contacto_li4: "Apps development.",
         footer: "© 2026 Sofía Cartagena",
         exp_hospital: "La Paz de la Tarde Geriatric Hospital",
         exp_li1: "<span>Network infrastructure management:</span> Configuration and deployment of wired and wireless connectivity, ensuring local network (LAN) stability.",
@@ -237,12 +225,23 @@ const translations = {
 
 function applyLang(lang) {
     const t = translations[lang];
+    document.getElementById('lang-toggle').textContent =
+        lang === 'es' ? 'EN' : 'ES';
+
+    localStorage.setItem('lang', lang);
+
+    document.querySelector('.btn-download').href =
+        lang === 'en'
+            ? './assets/Sofia_Cartagena_FullStack_CV_EN.pdf'
+            : './assets/Sofia_Cartagena_FullStack_CV.pdf';
+
     document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
     localStorage.setItem('lang', lang);
 
     document.querySelector('a[href="#hero"]').textContent = t.nav_inicio;
     document.querySelector('a[href="#proyectos"]').textContent = t.nav_proyectos;
     document.querySelector('a[href="#contacto"]').textContent = t.nav_contacto;
+    document.querySelector('a[href="#sobremi"]').textContent = t.nav_sobre;
 
     document.querySelector('#hero h2').innerHTML = t.hero_titulo;
     document.querySelector('#hero p').textContent = t.hero_subtitulo;
@@ -251,15 +250,10 @@ function applyLang(lang) {
 
     document.querySelector('#sobremi h2').textContent = t.sobre_titulo;
     const sobreP = document.querySelectorAll('#sobremi .sobremi-texto p');
-    sobreP[0].textContent = t.sobre_p1;
+    sobreP[0].textContent = t.sobre_p1; 
     sobreP[1].textContent = t.sobre_p2;
-    sobreP[2].textContent = t.sobre_p3;
-    const sobreLi = document.querySelectorAll('#sobremi .sobremi-texto li');
-    sobreLi[0].innerHTML = t.sobre_li1;
-    sobreLi[1].innerHTML = t.sobre_li2;
-    sobreLi[2].innerHTML = t.sobre_li3;
-    sobreLi[3].innerHTML = t.sobre_li4;
 
+document.querySelector('#sobremi .sobremi-texto h3').textContent = t.sobre_h3;
     document.querySelector('#tecnologias h2').textContent = t.tec_titulo;
     document.querySelector('.frontend-dev h4').innerHTML = t.tec_diseno + ' <i class="bi bi-brush"></i>';
     document.querySelector('.backend-dev h4').innerHTML = t.tec_lenguajes + ' <i class="bi bi-file-code"></i>';
@@ -272,7 +266,6 @@ function applyLang(lang) {
     
     const expH4 = document.querySelectorAll('#experience .exp1 h4');
     expH4[0].innerHTML = t.exp_cargo;
-    expH4[1].textContent = t.exp_jornada;
 
     document.querySelector('#education h2').textContent = t.edu_titulo;
     document.querySelectorAll('.edu-text h3')[1].textContent = t.edu_carrera;
@@ -299,7 +292,6 @@ function applyLang(lang) {
     descLi[1].textContent = t.contacto_li2;
     descLi[2].textContent = t.contacto_li3;
     descLi[3].textContent = t.contacto_li4;
-    document.querySelector('.social-links h3').textContent = t.redes;
 
     document.querySelector('footer p').textContent = t.footer;
     document.querySelectorAll('[data-i18n]').forEach(el => {

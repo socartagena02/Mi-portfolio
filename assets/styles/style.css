@@ -199,7 +199,7 @@ body {
 .sobremi-texto {
     flex: 1;
     min-width: 280px;
-    max-width: 700px;
+    max-width: 1200px;
 }
 
 .sobremi-texto h2 {
@@ -217,18 +217,6 @@ body {
     font-weight: bold;
 }
 
-.sobremi-imagen {
-    flex: 0 0 200px; 
-    max-width: 200px; 
-    overflow: hidden;
-}
-
-
-.sobremi-imagen img {
-    width: 100%;
-    height: auto;
-    border-radius: 15px;
-}
 #experience{
     background-color: transparent;
     width: 100%; 
@@ -444,14 +432,13 @@ body {
     z-index: 2;
     backdrop-filter: blur(5px);
 }
-
-.img-container:hover .card-img {
-    filter: blur(8px) brightness(0.7);
-    transform: scale(1.05);
+.card-img {
+    transition: transform 0.4s ease, filter 0.4s ease;
 }
 
-.img-container:hover .figma-link {
-    opacity: 10;
+.img-container:hover .card-img {
+    transform: scale(1.08);
+    filter: brightness(1.1);
 }
 
 .btn-download {
@@ -533,6 +520,18 @@ body {
 .tag-django:hover {
     background-color: #003E2B !important;
     box-shadow: 0 0 15px #0c6d4d;
+}
+
+.tag-Render:hover {
+    background-color: #000000 !important;
+    color: white;
+    box-shadow: none;
+}
+
+.tag-Cloudflare:hover{
+    background-color: #F38020 !important;
+    color: white;
+    box-shadow: 0 0 15px #FAAE40;
 }
 
 .button-group {
@@ -881,7 +880,8 @@ body {
 
 .html:hover, .css:hover, .js:hover, .bootstrap:hover, .figma:hover,
 .mysql:hover, .sqlite3:hover, .node:hover, .java:hover, .python:hover, .Django:hover,
-.GitHub:hover, .Git:hover, .AWS:hover, .railway:hover {
+.GitHub:hover, .Git:hover, .AWS:hover, .railway:hover, .PostgreSQL:hover, .RN:hover, .TypeScript:hover,
+.TailwindCSS:hover, .Railway:hover, .Render:hover, .Cloudflare:hover, .Angular:hover{
     transform: translateY(-5px);
     box-shadow: 0 0 0 1px #FFE6E0; 
 }
@@ -989,13 +989,30 @@ body {
     text-align: left;
 }
 
-.social-links a {
+.hero-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero-socials a {
+    font-size: 2.2rem;
+    color: white;
+    transition: transform .3s ease;
+}
+
+.hero-socials a:hover {
+    transform: translateY(-3px);
+}
+
+.hero-socials a {
     color: var(--text-primary); 
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.social-links a:visited {
+.hero-socials a:visited {
     color: var(--text-primary);
 }
 
@@ -1006,6 +1023,11 @@ body {
 
 .bi-envelope:hover{
     color: rgb(173, 173, 173);
+    opacity: 1;
+}
+
+.bi-github:hover{
+    color:#3b3b3b;
     opacity: 1;
 }
 
