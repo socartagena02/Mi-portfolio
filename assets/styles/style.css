@@ -875,7 +875,7 @@ body {
     border-radius: 15px;
 }
 
-.frontend-dev ul, .backend-dev ul, .bd ul, .framework ul, .control ul, .deploy ul, .Infrastructure ul, .design ul{
+.frontend-dev ul, .backend-dev ul, .bd ul, .framework ul, .control ul, .deploy ul, .infrastructure ul, .design ul{
     display: flex;
     flex-direction: row;   
     flex-wrap: wrap;      
@@ -886,7 +886,7 @@ body {
     margin: 0;
 }
 .frontend-dev ul li, .backend-dev ul li, .bd ul li, .framework ul li, .control ul li,
-.deploy ul li, .Infrastructure ul li, .design ul li{
+.deploy ul li, .infrastructure ul li, .design ul li{
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1); 
     padding: 6px 15px;     
@@ -899,7 +899,7 @@ body {
 .html:hover, .css:hover, .js:hover, .bootstrap:hover, .figma:hover,
 .mysql:hover, .sqlite3:hover, .node:hover, .java:hover, .python:hover, .Django:hover,
 .GitHub:hover, .Git:hover, .AWS:hover, .railway:hover, .PostgreSQL:hover, .RN:hover, .TypeScript:hover,
-.TailwindCSS:hover, .Railway:hover, .Render:hover, .Cloudflare:hover, .Angular:hover{
+.TailwindCSS:hover, .Railway:hover, .Render:hover, .Cloudflare:hover, .Angular:hover, .Figma:hover{
     transform: translateY(-5px);
     box-shadow: 0 0 0 1px #FFE6E0; 
 }
