@@ -43,14 +43,20 @@ const observer = new IntersectionObserver((entries) => {
   rootMargin: '0px 0px -50px 0px'
 });
 
-window.addEventListener('load', () => {
+function initAfterLoad() {
   const loader = document.getElementById('loader');
   loader.style.opacity = '0';
   setTimeout(() => {
     loader.style.display = 'none';
     document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
   }, 500);
-});
+}
+
+if (document.readyState === 'complete') {
+  initAfterLoad();
+} else {
+  window.addEventListener('load', initAfterLoad);
+}
 
 let lastScrollTop = 0;
 const navbar = document.querySelector("nav");
