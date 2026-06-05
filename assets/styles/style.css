@@ -858,7 +858,7 @@ body {
     margin: 0;
 }
 
-.frontend-dev, .backend-dev, .bd, .framework, .control, .deploy, .Infrastructure, .design {  
+.frontend-dev, .backend-dev, .bd, .framework, .control, .deploy, .infrastructure, .design {  
     background: var(--cards); 
     backdrop-filter: blur(10px);    
     border: 1px solid rgba(255, 255, 255, 0.1);

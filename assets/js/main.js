@@ -281,7 +281,7 @@ function applyLang(lang) {
     document.querySelector('.bd h4').innerHTML = t.tec_bd + ' <i class="bi bi-database"></i>';
     document.querySelector('.framework h4').innerHTML = t.tec_framework + ' <i class="bi bi-bootstrap"></i>';
     document.querySelector('.control h4').innerHTML = t.tec_control + ' <i class="bi bi-git"></i>';
-    document.querySelector('.Infrastructure h4').innerHTML = t.tec_infrastructure + ' <i class="bi bi-rocket-takeoff"></i>';
+    document.querySelector('.infrastructure h4').innerHTML = t.tec_infrastructure + ' <i class="bi bi-rocket-takeoff"></i>';
     document.querySelector('.design h4').innerHTML = t.tec_design + ' <i class="bi bi-palette"></i>';
 
     document.querySelector('#experience h2').textContent = t.exp_titulo;
