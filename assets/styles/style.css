@@ -392,8 +392,13 @@ body {
 
 .proyecto-card p {
     text-align: left;
-    font-size: 20px;
-    color: #9999bb;
+    font-size: 17px;
+    color: #ccccdd;
+}
+
+.card-content h4 {
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 .proyecto-card button:hover {
@@ -853,7 +858,7 @@ body {
     margin: 0;
 }
 
-.frontend-dev, .backend-dev, .bd, .framework, .control, .deploy{  
+.frontend-dev, .backend-dev, .bd, .framework, .control, .deploy, .Infrastructure, .design {  
     background: var(--cards); 
     backdrop-filter: blur(10px);    
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -870,7 +875,7 @@ body {
     border-radius: 15px;
 }
 
-.frontend-dev ul, .backend-dev ul, .bd ul, .framework ul, .control ul, .deploy ul {
+.frontend-dev ul, .backend-dev ul, .bd ul, .framework ul, .control ul, .deploy ul, .Infrastructure ul, .design ul{
     display: flex;
     flex-direction: row;   
     flex-wrap: wrap;      
@@ -881,7 +886,7 @@ body {
     margin: 0;
 }
 .frontend-dev ul li, .backend-dev ul li, .bd ul li, .framework ul li, .control ul li,
-.deploy ul li {
+.deploy ul li, .Infrastructure ul li, .design ul li{
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1); 
     padding: 6px 15px;     

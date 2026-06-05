@@ -32,25 +32,38 @@ async function loadParticles() {
 
 loadParticles();
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+});
+
 window.addEventListener('load', () => {
   const loader = document.getElementById('loader');
   loader.style.opacity = '0';
-  setTimeout(() => loader.style.display = 'none', 500);
+  setTimeout(() => {
+    loader.style.display = 'none';
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+  }, 500);
 });
 
 let lastScrollTop = 0;
-const navbar= document.querySelector("nav")
+const navbar = document.querySelector("nav");
 
 window.addEventListener("scroll", function(){
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop){
         navbar.classList.add("nav-hidden");
-    }else{
+    } else {
         navbar.classList.remove("nav-hidden");
     }
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
 }, false);
-
 
 const btnVerMas = document.getElementById('btnverMas');
 const carpeta = document.getElementById('proyectos2');
@@ -106,7 +119,7 @@ const translations = {
     es: {
         nav_inicio: "Inicio",
         nav_sobre: "Sobre mi",
-        nav_proyectos: "Mis proyectos",
+        nav_proyectos: "Proyectos",
         nav_tecnologias: "Tecnologías",
         nav_contacto: "Contacto",
         hero_titulo: "Hola soy <span>Sofía Cartagena</span>",
@@ -123,15 +136,16 @@ const translations = {
         edu_carrera: "Ingeniería en Informática",
         edu_fecha: "Mar 2022 - Dic 2025",
         cert_titulo: "Certificaciones",
-        proy_titulo: "Mis proyectos",
+        proy_titulo: "Proyectos Destacados",
         tec_titulo: "Tecnologías",
         tec_diseno: "Frontend",
         tec_lenguajes: "Backend",
         tec_bd: "Base de datos",
-        tec_framework: "Framework",
+        tec_framework: "Frameworks",
         tec_control: "Herramientas",
-        tec_deploy: "Infraestructura",
-        proy_explorar: "Explorar mas proyectos",
+        tec_infrastructure: "Infraestructura",
+        tec_design:"Diseño",
+        proy_explorar: "Explorar más proyectos",
         idiomas_titulo: "Idiomas",
         idiomas_es: "Español",
         idiomas_es_nivel: "Nativo",
@@ -145,7 +159,7 @@ const translations = {
         contacto_enviar: "Enviar",
         contacto_desc: "Siempre dispuesta a discutir nuevas oportunidades, proyectos creativos o colaboraciones. Ya sea que tengas un proyecto en mente o quieras explorar posibilidades, me encantaría conectar.",
         contacto_li1: "Desarrollo web.",
-        contacto_li2: "Diseño UI/UX.",
+        contacto_li2: "Backend con Python",
         contacto_li3: "APIs REST.",
         contacto_li4: "Desarrollo aplicaciones.",
         footer: "© 2026 Sofía Cartagena",
@@ -155,20 +169,19 @@ const translations = {
         exp_li3: "<span>Administración de periféricos:</span> Instalación, configuración y \"provisionamiento\" de sistemas de impresión y dispositivos de red, reduciendo tiempos de inactividad técnica.",
         exp_li4: "<span>Soporte multiplataforma:</span> Diagnóstico técnico y alfabetización digital para usuarios finales, facilitando la adopción de nuevas herramientas tecnológicas.",
         proy_zstars:"Z-STARS AI - Plataforma web de Estimulación cognitiva.",
-        proy_zstars_desc: "Plataforma web de Estimulación cognitiva con minijuegos interactivos e IA.",
+        proy_zstars_desc: "Plataforma web con minijuegos interactivos integrados con IA para estimulación cognitiva. Backend en Django con integración Groq y despliegue en producción.",
         proy_ai: "Herramienta para detectar caras en asistencia.",
-        proy_stars:"Starsverse - Página web e-commerce automatizado.",
-        proy_starsverse: "Una plataforma de compras online para fanáticos del anime.",
+        proy_stars:"Starsverse - Plataforma e-commerce para fanáticos del anime",
+        proy_starsverse: "E-commerce para productos anime con gestión de catálogo y carrito. Construida con Angular y TypeScript explorando arquitecturas frontend modernas.",
         proy_AgeUp: "AgeUp_Games es un sistema web de minijuegos cognitivos para el adulto mayor.",
         proy_paradise: "The Paradise of the Wheel es una aplicación móvil de viajes para alumnos de la institución.",
-        App_social: "Red social gamificada - Full-Stack Mobile",
-        music_disc: "App móvil con backend API para interacción social gamificada en equipo.",
-        contacto_subtitulo: "Envíame un mensaje"
+        App_social: "Redgeon - Aplicación móvil Full-Stack",
+        music_disc: "App móvil multiplataforma con autenticación JWT, API REST propia y mecánicas de gamificación social. Full-Stack completo con React Native y Django.",
     },
     en: {
         nav_inicio: "Home",
         nav_sobre: "About me",
-        nav_proyectos: "My Projects",
+        nav_proyectos: "Projects",
         nav_tecnologias: "Technologies",
         nav_contacto: "Contact",
         hero_titulo: "Hi, I'm <span>Sofía Cartagena</span>",
@@ -185,14 +198,15 @@ const translations = {
         edu_carrera: "Computer Engineering",
         edu_fecha: "Mar 2022 - Dec 2025",
         cert_titulo: "Certifications",
-        proy_titulo: "My Projects",
+        proy_titulo: "Highlighted projects",
         tec_titulo: "Technologies",
         tec_diseno: "Frontend",
         tec_lenguajes: "Backend",
         tec_bd: "Databases",
         tec_framework: "Frameworks",
         tec_control: "DevTools",
-        tec_deploy: "Infrastructure",
+        tec_infrastructure: "Infrastructure",
+        tec_design:"Design",
         proy_explorar: "Explore more projects",
         idiomas_titulo: "Languages",
         idiomas_es: "Spanish",
@@ -207,7 +221,7 @@ const translations = {
         contacto_enviar: "Send",
         contacto_desc: "Always open to discussing new opportunities, creative projects, or collaborations. Whether you have a project in mind or just want to explore possibilities, I'd love to connect.",
         contacto_li1: "Web Development.",
-        contacto_li2: "UI/UX Design.",
+        contacto_li2: "Backend with Python",
         contacto_li3: "REST APIs.",
         contacto_li4: "Apps development.",
         footer: "© 2026 Sofía Cartagena",
@@ -216,33 +230,28 @@ const translations = {
         exp_li2: "<span>Preventive and corrective maintenance:</span> Resolution of hardware and software incidents on workstations, optimizing equipment performance.",
         exp_li3: "<span>Peripheral administration:</span> Installation, configuration and provisioning of printing systems and network devices, reducing technical downtime.",
         exp_li4: "<span>Cross-platform support:</span> Technical diagnosis and digital literacy for end users, facilitating adoption of new technological tools.",
-        proy_zstars:"Z-STARS AI - Cognitive stimulation web platform.",
-        proy_zstars_desc: "Web platform for cognitive stimulation with interactive mini-games and AI.",
+        proy_zstars:"Z-STARS AI - AI-powered cognitive stimulation web platform.",
+        proy_zstars_desc: "Web platform featuring interactive mini-games powered by AI for cognitive stimulation. Backend built with Django, integrated with Groq, and deployed in production.",
         proy_ai: "Tool for detecting faces in attendance tracking.",
-        proy_starsverse: "An online shopping platform for anime fans.",
-        proy_stars:"Starsverse - Automated e-commerce website.",
+        proy_starsverse: "E-commerce platform for anime products with catalog and shopping cart management. Built with Angular and TypeScript, exploring modern front-end architectures.",
+        proy_stars:"Starsverse - E-commerce platform for anime fans",
         proy_AgeUp: "AgeUp_Games is a web-based cognitive mini-game system for the elderly.",
         proy_paradise: "The Paradise of the Wheel is a mobile travel app for students of the institution.",
-        App_social: "Gamified social network - Full-Stack Mobile",
-        music_disc: "Mobile app with an API backend for gamified team-based social interaction.",
+        App_social: "Redgeon - Full-Stack Mobile",
+        music_disc: "Cross-platform mobile app with JWT authentication, a custom REST API, and social gamification features. Full-stack development using React Native and Django.",
         contacto_subtitulo: "Send me a message",
     }
 };
 
 function applyLang(lang) {
     const t = translations[lang];
-    document.getElementById('lang-toggle').textContent =
-        lang === 'es' ? 'EN' : 'ES';
-
+    document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
     localStorage.setItem('lang', lang);
 
     document.querySelector('.btn-download').href =
         lang === 'en'
-            ? './assets/Sofia_Cartagena_FullStack_CV_EN.pdf'
+            ? './assets/Sofia_Cartagena_FullStack_RESUME.pdf'
             : './assets/Sofia_Cartagena_FullStack_CV.pdf';
-
-    document.getElementById('lang-toggle').textContent = lang === 'es' ? 'EN' : 'ES';
-    localStorage.setItem('lang', lang);
 
     document.querySelector('a[href="#hero"]').textContent = t.nav_inicio;
     document.querySelector('a[href="#proyectos"]').textContent = t.nav_proyectos;
@@ -258,18 +267,18 @@ function applyLang(lang) {
     const sobreP = document.querySelectorAll('#sobremi .sobremi-texto p');
     sobreP[0].textContent = t.sobre_p1; 
     sobreP[1].textContent = t.sobre_p2;
+    document.querySelector('#sobremi .sobremi-texto h3').textContent = t.sobre_h3;
 
-document.querySelector('#sobremi .sobremi-texto h3').textContent = t.sobre_h3;
     document.querySelector('#tecnologias h2').textContent = t.tec_titulo;
     document.querySelector('.frontend-dev h4').innerHTML = t.tec_diseno + ' <i class="bi bi-brush"></i>';
     document.querySelector('.backend-dev h4').innerHTML = t.tec_lenguajes + ' <i class="bi bi-file-code"></i>';
     document.querySelector('.bd h4').innerHTML = t.tec_bd + ' <i class="bi bi-database"></i>';
     document.querySelector('.framework h4').innerHTML = t.tec_framework + ' <i class="bi bi-bootstrap"></i>';
     document.querySelector('.control h4').innerHTML = t.tec_control + ' <i class="bi bi-git"></i>';
-    document.querySelector('.deploy h4').innerHTML = t.tec_deploy + ' <i class="bi bi-rocket-takeoff"></i>';
+    document.querySelector('.Infrastructure h4').innerHTML = t.tec_infrastructure + ' <i class="bi bi-rocket-takeoff"></i>';
+    document.querySelector('.design h4').innerHTML = t.tec_design + ' <i class="bi bi-palette"></i>';
 
     document.querySelector('#experience h2').textContent = t.exp_titulo;
-    
     const expH4 = document.querySelectorAll('#experience .exp1 h4');
     expH4[0].innerHTML = t.exp_cargo;
 
@@ -301,12 +310,10 @@ document.querySelector('#sobremi .sobremi-texto h3').textContent = t.sobre_h3;
 
     document.querySelector('footer p').textContent = t.footer;
     document.querySelectorAll('[data-i18n]').forEach(el => {
-    
-    const key = el.getAttribute('data-i18n');
-    if (t[key]) el.innerHTML = t[key];
+        const key = el.getAttribute('data-i18n');
+        if (t[key]) el.innerHTML = t[key];
     });
-  }
-
+}
 
 function toggleLang() {
     const current = localStorage.getItem('lang') || 'es';
@@ -315,13 +322,3 @@ function toggleLang() {
 
 const savedLang = localStorage.getItem('lang') || 'es';
 applyLang(savedLang);
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
